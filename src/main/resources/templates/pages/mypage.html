@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled 서버</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" th:href=" @{/css/style.css}">
+    <link rel="stylesheet" th:href=" @{/css/pages/mypage.css}">
+    <!-- CSS -->
+
+    <!-- Script -->
+    <script th:src="@{/script/script.js}" defer></script>
+    <!-- Script -->
+</head>
+
+<body>
+    <nav>
+		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
+	</nav>
+    <header>
+        <div class="mypage">
+            <h2 class="mypage-title">마이페이지</h2>
+        
+            <!-- User Info Section -->
+            <div class="user-info">
+                <h3 class="section-title">개인 정보</h3>
+                <div class="input-group">
+                    <label for="username">인게임 이름</label>
+                    <div class="input-form">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                        <input id="username" type="text" value="현재 인게임 이름" disabled>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="email">대학교 이메일</label>
+                    <div class="input-form">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path>
+                        </svg>
+                        <input id="email" type="email" value="현재 이메일 주소" disabled>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Password Change Section -->
+            <div class="password-change">
+                <h3 class="section-title">비밀번호 변경</h3>
+                <div class="input-group">
+                    <label for="current-password">현재 비밀번호</label>
+                    <div class="input-form">
+                        <svg viewBox="-64 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path>
+                            <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
+                        </svg>
+                        <input id="current-password" type="password" placeholder="현재 비밀번호 입력">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="new-password">새 비밀번호</label>
+                    <div class="input-form">
+                        <svg viewBox="-64 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path>
+                            <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
+                        </svg>
+                        <input id="new-password" type="password" placeholder="새 비밀번호 입력">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-new-password">새 비밀번호 확인</label>
+                    <div class="input-form">
+                        <svg viewBox="-64 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path>
+                            <path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
+                        </svg>
+                        <input id="confirm-new-password" type="password" placeholder="새 비밀번호 재입력">
+                    </div>
+                </div>
+                <button type="submit" class="button-submit">비밀번호 변경</button>
+            </div>
+        
+            <!-- Additional Settings -->
+            <div class="settings">
+                <h3 class="section-title">추가 설정</h3>
+                <button class="button-submit">로그아웃</button>
+            </div>
+        </div>
+        
+        
+    </header>
+
+
+    <footer>
+    	<th:block th:replace="~{fragments/fragment_footer :: footer}"></th:block>
+	</footer>
+</body>
+
+</html>

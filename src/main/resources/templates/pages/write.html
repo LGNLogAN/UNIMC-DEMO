@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled 서버</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href=" @{/css/style.css}">
+    <link rel="stylesheet" th:href=" @{/css/pages/write.css} ">
+    <link rel="stylesheet" th:href=" @{https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css}" />
+    <!-- CSS -->
+
+    <!-- Script -->
+    <script th:src="@{/script/write.js}" defer></script>
+    <script th:src="@{/script/script.js}" defer></script>
+    <!-- Script -->
+</head>
+
+<body>
+    <nav>
+		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
+	</nav>
+    <header>
+        <div class="main-title">글 작성</div>
+        <div class="sub_title">관리자 전용</div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>공지사항 작성</h1>
+            <form>
+                <div class="form-group">
+                    <label for="category">유형</label>
+                    <select id="category" name="category" required>
+                        <option value="">글 유형 선택</option>
+                        <option value="announce">공지사항</option>
+                        <option value="update">업데이트</option>
+                        <option value="maintenance">점검</option>
+                    </select>
+                </div>
+                <!-- 추가 필드 영역 -->
+                <div id="additional-fields"></div>
+                <div class="form-group">
+                    <!-- ckeditor 같은거 있으면 좋을 듯 -->
+                    <label for="content">내용</label>
+                    <textarea id="content" name="content" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">공지사항 등록</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+    	<th:block th:replace="~{fragments/fragment_footer :: footer}"></th:block>
+	</footer>
+</body>
+
+</html>

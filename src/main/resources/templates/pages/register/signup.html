@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Untitled 서버</title>
+	<!-- CSS -->
+	<link rel="stylesheet" th:href=" @{/css/style.css}">
+	<link rel="stylesheet" th:href=" @{/css/pages/signup.css} ">
+	<!-- CSS -->
+	
+	<!-- Script -->
+	<script th:src="@{/script/script.js}" defer></script>
+	<script type="module" th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}" defer></script>
+	<script nomodule th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}" defer></script>
+	<!-- Script -->
+</head>
+<body>
+	<nav>
+		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
+	</nav>
+	<header>
+        <div class="header-content">
+    		<div class="hc-title">
+		        <div class="main-title">회원가입</div>
+		        <div class="sub-title">간단한 회원가입으로 서버에 접속하세요 !</div>
+	        </div>
+			<div class="hc-logo">
+			</div>
+		</div>
+    </header>
+    <section>
+        <div class="section-container">
+        	<div class="signup-container">
+        		<div class="sc-header">
+					<h1>필수 정보 입력</h1>
+					<div class="description">서버를 플레이하는데 꼭 필요한 정보이므로 정확하게 입력해주세요 !</div>
+				</div>
+				
+				<form action="" class="signup-form">
+        			<div class="input-group">
+        				<label for="name">이름</label>
+        				<div class="input-form">
+		                    <ion-icon name="person-outline" class="tagIcon"></ion-icon>
+		                    <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." autocomplete="off">
+		                </div>
+        			</div>
+        			<div class="input-group">
+        				<label for="name">마인크래프트 닉네임</label>
+        				<div class="input-form">
+		                    <ion-icon name="person-outline" class="tagIcon"></ion-icon>
+		                    <input id="mcname" name="mcname" type="text" placeholder="마인크래프트 닉네임을 입력해주세요 !" autocomplete="off">
+		                </div>
+        			</div>
+        			<div class="input-group">
+        				<label for="email">대학교 이메일</label>
+	        				<div class="input-form">
+	        					<div class="input-form-section">
+			        				<ion-icon name="at-outline" class="tagIcon"></ion-icon>
+				                    <input id="email" name="email" type="text" placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off">
+				                </div>
+		                		<button class="btn-send">코드전송</button>
+                			</div>
+                		
+	                	<div class="input-form-auth">
+	                		<label for="code">인증코드 입력</label>
+	                		<span class="authentication-pass">인증되었습니다</span>
+	                		<span class="authentication-fail">옳지않은 인증코드입니다.</span>
+	                		
+	                		<div class="input-form-code">
+	                			<ion-icon name="key-outline" class="tagIcon"></ion-icon>
+	                			<input id="code" name="code" type="text" placeholder="인증코드" autocomplete="off">
+	                			<button class="btn-check">확인</button>
+	                		</div>
+	                	</div>
+        			</div>
+        			<div class="input-group">
+        				<label for="password">비밀번호</label>
+        				<span class="authentication-pass">비밀번호가 일치합니다.</span>
+                		<span class="authentication-fail">비밀번호가 일치하지않습니다.</span>
+        				<div class="input-form">
+        					<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
+		                    <input id="password" name="password" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off">
+		                </div> 
+		                <div class="description">저희 서버는 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」에 따라 모든 비밀번호를 안전하게 암호화하여 처리하고 있습니다.</div>
+        				<label for="password_check">비밀번호 재확인</label>
+        				<div class="input-form">
+        					<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
+		                    <input id="password_check" name="password_check" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off">
+		                </div> 
+        			
+        			</div>
+        			
+        			<div class="input-group">
+        				<label for="major">전공</label>
+        				<div class="input-form">
+		                    <ion-icon name="school-outline" class="tagIcon"></ion-icon>
+		                    <input id="major" name="major" type="text" placeholder="전공을 적어주세요." autocomplete="off">
+		                </div>
+        			</div>
+        			<div class="input-group">
+        				<label for="campus">캠퍼스</label>
+        				<div class="input-form">
+		                    <ion-icon name="trail-sign-outline" class="tagIcon"></ion-icon>
+		                    <input id="campus" name="campus" type="text" placeholder="캠퍼스를 적어주세요." autocomplete="off">
+		                </div>
+        			</div>
+        			
+        			<div class="submit-container">
+        				<button>서버 접속 하기 !</button>
+        			</div>
+        		</form>
+        	</div>
+        </div>
+    </section>
+	<footer>
+    	<th:block th:replace="~{fragments/fragment_footer :: footer}"></th:block>
+	</footer>
+</body>
+</html>

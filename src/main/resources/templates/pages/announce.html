@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled 서버</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href=" @{/css/style.css}">
+    <link rel="stylesheet" th:href=" @{/css/pages/announce.css} ">
+<!--     <link rel="stylesheet" th:href=" @{/css/components/header.css}"> -->
+    <!-- CSS -->
+
+    <!-- Script -->
+    <script th:src="@{/script/sort.js}" defer></script>
+    <script th:src="@{/script/script.js}" defer></script>
+    <!-- Script -->
+</head>
+
+<body>
+    <nav>
+		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
+	</nav>
+    <header>
+    	<div class="header-content">
+    		<div class="hc-title">
+		        <div class="main-title">공지사항</div>
+		        <div class="sub-title">서버의 중요한 소식과 업데이트 내용을 확인하세요.</div>
+	        </div>
+			<div class="hc-logo">
+				<svg width="80" height="80" fill="none" stroke="#ffffff"
+					stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+					viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect>
+					<path d="M12 10a4 4 0 1 0 0 8 4 4 0 1 0 0-8z"></path>
+					<path d="M12 6h.01"></path>
+				</svg>
+			</div>
+		</div>
+    </header>
+
+    <section>
+        <div class="section-container">
+            <div class="server-status-container">
+                <div class="status-header">
+                    <div class="status-title">서비스 상태</div>
+                </div>
+                <div class="alerts-container">
+                    <div class="alert alert-success">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <p class="alert-text">온라인 - 서버가 정상적으로 작동중입니다!</p>
+                    </div>
+                    <div class="alert alert-info">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <p class="alert-text">정보 - 일정없음</p>
+                    </div>
+                    <div class="alert alert-warning">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                            </path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        <p class="alert-text">주의 - 없음</p>
+                    </div>
+                    <div class="alert alert-error">
+                        <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" class="icon"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 16h-1v-4h1m0-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"
+                                stroke-linejoin="round" stroke-linecap="round"></path>
+                        </svg>
+                        <p class="alert-text">Error - Something went wrong.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="padding-box"></div>
+            <div class="announce-container">
+                <!-- 폼전송으로 id 값을 보내주면 detail 로 넘어가는 방식으로 진행해야할듯함 -->
+                <!-- 그리고 3개 이상 부턴 더보기 버튼으로 정보를 안 보이게 하고 AJAX 로 더보기버튼을 누르면 더 보여주게 기능구현 -->
+                <div class="announce-header">
+                    <div class="announce-title">무슨 일이 일어났나요 ?</div>
+
+                    <div class="announce-option">
+                        <!-- 공지작성 버튼은 어드민 계정으로 로그인했을 경우에 보여짐 -->
+                        <button class="announce-write" onclick="location.href='/page/write.html'">공지 작성</button>
+
+                        <div class="sort-container">
+                            <button id="sort" class="sort">
+                                <svg width="20" height="20" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown" id="dropdown">
+                                <button id="recent">최근</button>
+                                <button id="asc">오름차순</button>
+                                <button id="desc">내림차순</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="announcements">
+                    <article class="announcement">
+                        <div class="announcement-header">
+                            서버 점검 안내
+                        </div>
+                        <div class="announcement-content">
+                            <div class="announcement-meta">
+                                작성일: 2023년 6월 15일 | 작성자: 관리자
+                            </div>
+                            <div class="announcement-body">
+                                <p>6월 20일 오전 2시부터 4시까지 서버 점검이 예정되어 있습니다. 해당 시간 동안 서비스 이용이 제한될 수 있으니 양해 부탁드립니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="announcement">
+                        <div class="announcement-header">
+                            서버 점검 안내
+                        </div>
+                        <div class="announcement-content">
+                            <div class="announcement-meta">
+                                작성일: 2023년 6월 15일 | 작성자: 관리자
+                            </div>
+                            <div class="announcement_body">
+                                <p>6월 20일 오전 2시부터 4시까지 서버 점검이 예정되어 있습니다. 해당 시간 동안 서비스 이용이 제한될 수 있으니 양해 부탁드립니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="announcement">
+                        <div class="announcement-header">
+                            서버 점검 안내
+                        </div>
+                        <div class="announcement-content">
+                            <div class="announcement-meta">
+                                작성일: 2023년 6월 15일 | 작성자: 관리자
+                            </div>
+                            <div class="announcement-body">
+                                <p>6월 20일 오전 2시부터 4시까지 서버 점검이 예정되어 있습니다. 해당 시간 동안 서비스 이용이 제한될 수 있으니 양해 부탁드립니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="announcement">
+                        <div class="announcement-header">
+                            서버 점검 안내
+                        </div>
+                        <div class="announcement-content">
+                            <div class="announcement-meta">
+                                작성일: 2023년 6월 15일 | 작성자: 관리자
+                            </div>
+                            <div class="announcement-body">
+                                <p>6월 20일 오전 2시부터 4시까지 서버 점검이 예정되어 있습니다. 해당 시간 동안 서비스 이용이 제한될 수 있으니 양해 부탁드립니다.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+    	<th:block th:replace="~{fragments/fragment_footer :: footer}"></th:block>
+	</footer>
+</body>
+
+</html>

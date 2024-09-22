@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untitled 서버</title>
+
+<!-- CSS -->
+<link rel="stylesheet" th:href=" @{/css/style.css}">
+<link rel="stylesheet" th:href=" @{/css/pages/register.css} ">
+<!-- CSS -->
+
+<!-- Script -->
+<script th:src="@{/script/script.js}" defer></script>
+<script type="module"th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}"defer></script>
+<script nomoduleth:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}"defer></script>
+
+<!-- Script -->
+</head>
+
+<body>
+	<nav>
+		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
+	</nav>
+	<header>
+		<div class="container">
+			<div class="register">
+				<h1>회원가입 방식 선택</h1>
+				<div class="options">
+					<div class="option" onclick="location.href='/simplesignup'">
+						<div class="icon">🚀</div>
+						<h2>간편 회원가입</h2>
+						<p>에브리타임 프로필 사진으로 최대한 빨리 서버에 접속해보세요 !</p>
+					</div>
+					<div class="option" onclick="location.href='/signup'">
+						<div class="icon">📝</div>
+						<h2>일반 회원가입</h2>
+						<p>서버를 즐기는데 필요한 최소한의 정보를 입력하여 가입하세요 !</p>
+					</div>
+				</div>
+				<button class="button" onclick="location.href='/login'">이미
+					계정이 있으신가요? 로그인</button>
+			</div>
+		</div>
+	</header>
+	<footer>
+		<th:block th:replace="~{fragments/fragment_footer :: footer}"></th:block>
+	</footer>
+</body>
+
+</html>

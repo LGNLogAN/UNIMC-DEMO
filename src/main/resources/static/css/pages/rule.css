@@ -1,0 +1,78 @@
+@import url('/css/components/header.css');
+
+.container {
+    max-width: 1500px;
+    margin: 100px auto;
+    padding : 10px; 
+}
+.container-detail{
+    max-width: 1000px;
+    margin: 100px auto;
+    margin-bottom: 200px;
+    padding : 10px; 
+}
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 40px;
+    margin-bottom: 0.5em;
+}
+.description {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2em;
+    font-size: 1.1em;
+}
+.rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.rule-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 9px 10px rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rule-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.rule-icon {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+.rule-content {
+    padding: 20px;
+}
+.rule-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+.rule-description {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+.rule-details {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+.warn {
+    text-align: center;
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 01em;
+    color: #3498db;
+}
+@media (max-width: 600px) {
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+}

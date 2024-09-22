@@ -1,0 +1,173 @@
+header {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url('/img/mc_background.jpg');
+    background-size: cover;
+    filter: blur(8px) brightness(50%);
+    transform : scale(1.1);
+    z-index: -1;
+    border-image: fill 1 linear-gradient(#0001,#000);
+}
+
+.main_title{
+    width: 80%;
+    margin : 0 auto;
+    font-size : 45px;
+    text-align: start;
+    font-family: 'SBAggroB';
+    margin-top : 200px;
+    color: white;
+}
+.sub_title{
+    width: 80%;
+    margin : 0 auto;
+    font-size : 20px;
+    text-align: start;
+    font-family: 'Pretendard-Regular';
+    padding : 10px;
+    color: white;
+}
+
+section {
+    background-color: #ffffff;
+}
+
+.section_container {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top : 40px;
+    margin-bottom : 150px;
+}
+
+
+
+header {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    height: 1500px;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url('/img/mc_background.jpg');
+    background-size: cover;
+    filter: blur(8px) brightness(50%);
+    transform : scale(1.1);
+    z-index: -1;
+    border-image: fill 1 linear-gradient(#0001,#000);
+}
+
+.mypage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 40px;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mypage-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #151717;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #151717;
+    margin-bottom: 10px;
+}
+
+.user-info, .password-change, .settings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    text-align: start;
+    color: #151717;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.input-form {
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.input-form:focus-within {
+    border-color: #2d79f3;
+}
+
+.input-form svg {
+    width: 20px;
+    height: 20px;
+    fill: #151717;
+}
+
+.input-form input {
+    margin-left: 10px;
+    border: none;
+    width: 100%;
+    height: 90%;
+    font-size: 16px;
+}
+
+.input-form input:focus {
+    outline: none;
+}
+
+.button-submit {
+    background-color: #151717;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-submit:hover {
+    background-color: #2c2e2e;
+}

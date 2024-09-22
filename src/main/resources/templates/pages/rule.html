@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled 서버</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" th:href=" @{/css/style.css}">
+    <link rel="stylesheet" th:href=" @{/css/pages/rule.css} ">
+    <!-- CSS -->
+
+    <!-- Script -->
+    <script th:src="@{/script/script.js}" defer></script>
+    <!-- Script -->
+</head>
+
+<body>
+    <nav>
+		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
+	</nav>
+    <header>
+        <div class="header-content">
+    		<div class="hc-title">
+		        <div class="main-title">서버규칙</div>
+		        <div class="sub-title">간단하지만 필수적인 규칙 | 세부 규칙 사항</div>
+	        </div>
+			<div class="hc-logo">
+				<svg width="80" height="80" fill="none" stroke="#ffffff"
+					stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+					viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect>
+					<path d="M12 10a4 4 0 1 0 0 8 4 4 0 1 0 0-8z"></path>
+					<path d="M12 6h.01"></path>
+				</svg>
+			</div>
+		</div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>기본적인 규칙사항</h1>
+            <p class="description">아래 규칙들만 지켜도 서버를 플레이하는 문제가 없는 규칙들</p>
+
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">👥</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">존중과 예의</h2>
+                        <p class="rule-description">모든 사용자를 존중하고 예의 바르게 대해주세요.</p>
+                        <p class="rule-details">욕설, 비방, 차별적 발언은 엄격히 금지됩니다. 서로를 존중하는 태도로 대화해 주세요.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">💬</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">채팅 규칙</h2>
+                        <p class="rule-description">스팸, 과도한 대문자 사용, 광고성 메시지를 자제해 주세요.</p>
+                        <p class="rule-details">채팅의 가독성과 질을 유지하기 위해 불필요한 반복 메시지나 과도한 이모티콘 사용을 자제해 주세요.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🎮</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">게임 플레이</h2>
+                        <p class="rule-description">다른 플레이어의 게임 경험을 존중해 주세요.</p>
+                        <p class="rule-details">치팅, 해킹, 버그 악용은 엄격히 금지됩니다. 공정한 플레이를 해주세요.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🔒</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">개인정보 보호</h2>
+                        <p class="rule-description">자신과 타인의 개인정보를 공유하지 마세요.</p>
+                        <p class="rule-details">실명, 주소, 전화번호 등의 개인정보를 서버 내에서 공유하는 것은 위험할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🖥️</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">서버 자원 존중</h2>
+                        <p class="rule-description">서버의 자원을 과도하게 사용하지 마세요.</p>
+                        <p class="rule-details">불필요한 리소스 낭비를 방지하기 위해 과도한 레드스톤 장치 사용이나 대규모 파괴 행위를 자제해 주세요.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🖥️</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">서버 자원 존중</h2>
+                        <p class="rule-description">서버의 자원을 과도하게 사용하지 마세요.</p>
+                        <p class="rule-details">불필요한 리소스 낭비를 방지하기 위해 과도한 레드스톤 장치 사용이나 대규모 파괴 행위를 자제해 주세요.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🖥️</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">서버 자원 존중</h2>
+                        <p class="rule-description">서버의 자원을 과도하게 사용하지 마세요.</p>
+                        <p class="rule-details">불필요한 리소스 낭비를 방지하기 위해 과도한 레드스톤 장치 사용이나 대규모 파괴 행위를 자제해 주세요.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🖥️</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">서버 자원 존중</h2>
+                        <p class="rule-description">서버의 자원을 과도하게 사용하지 마세요.</p>
+                        <p class="rule-details">불필요한 리소스 낭비를 방지하기 위해 과도한 레드스톤 장치 사용이나 대규모 파괴 행위를 자제해 주세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warn">
+                규칙을 숙지하지 않아 발생하는 불이익에 대해서는 아무런 책임을 지지 않습니다.
+            </div>
+        </div>
+        <div class="container-detail">
+            <h1>고급 규정 안내</h1>
+
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">🖥️</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">법전</h2>
+                        <p class="rule-description">서버의 모든 규칙을 확인할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">🖥️</div>
+                    <div class="rule-content">
+                        <h2 class="rule-title">법전</h2>
+                        <p class="rule-description">서버의 모든 규칙을 확인할 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<footer>
+    	<th:block th:replace="~{fragments/fragment_footer :: footer}"></th:block>
+	</footer>
+</body>
+</html>

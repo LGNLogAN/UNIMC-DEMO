@@ -1,0 +1,223 @@
+@import url('/css/components/header.css');
+@import url('/css/pages/signup.css');
+h3{
+	font-family: 'Pretendard-Regular';
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+.everytime-profile-form {
+	display: flex;
+	gap: 40px;
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+@media (max-width : 480px){
+.everytime-profile-form {
+		gap: 0px;
+		display: flex;
+		width: 70%;
+		flex-direction: column;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+}
+
+.file-upload-example-container{
+	width: 100%;
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 4rem;
+}
+.phone {
+	width: 200px;
+	height: 400px;
+	background: black;
+	border-radius: 35px;
+	border: 2px solid rgb(40, 40, 40);
+	padding: 7px;
+	position: relative;
+	box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.486);
+}
+
+.phone-int {
+    background-image: url('/img/jinsiwoo_Everytime.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 25px;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.phone-int:hover {
+    background-size: cover;
+    background-position: center;
+}
+
+.top {
+	position: absolute;
+	top: 0px;
+	right: 50%;
+	transform: translate(50%, 0%);
+	width: 35%;
+	height: 18px;
+	background-color: black;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.speaker {
+	position: absolute;
+	top: 2px;
+	right: 50%;
+	transform: translate(50%, 0%);
+	width: 40%;
+	height: 2px;
+	border-radius: 2px;
+	background-color: rgb(20, 20, 20);
+}
+
+.camera {
+	position: absolute;
+	top: 6px;
+	right: 84%;
+	transform: translate(50%, 0%);
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.048);
+}
+
+.int {
+	position: absolute;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
+	background-color: rgba(0, 0, 255, 0.212);
+}
+
+.btn1,
+.btn2,
+.btn3,
+.btn4 {
+	position: absolute;
+	width: 2px;
+}
+
+.btn1,
+.btn2,
+.btn3 {
+	height: 45px;
+	top: 30%;
+	right: -4px;
+	background-image: linear-gradient(to right, #111111, #222222, #333333, #464646, #595959);
+}
+
+.btn2,
+.btn3 {
+	transform: scale(-1);
+	left: -4px;
+}
+
+.btn2,
+.btn3 {
+	transform: scale(-1);
+	height: 30px;
+}
+
+.btn2 {
+	top: 26%
+}
+
+.btn3 {
+	top: 36%
+}
+
+.phone:hover .hidden {
+	opacity: 1;
+}
+
+.phone:hover .hello {
+	transform: translateY(-20px);
+}
+.changeBtn{
+	margin-top : 20px;
+}
+.changeBtn button{
+	background-color: #007bff;
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	padding: 12px 20px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	width: 100%;
+}
+
+.changeBtn button:hover {
+	background-color: #0056b3;
+}
+.file-upload {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+}
+.file-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.file-upload-label:hover {
+    border-color: #4a90e2;
+    background-color: #f8fafc;
+}
+.file-upload-icon {
+    font-size: 48px;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+.file-upload-text {
+    color: #4a5568;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.file-name {
+    color: #718096;
+    font-size: 14px;
+    margin-top: 10px;
+    word-break: break-all;
+}
+.file-upload-input {
+    display: none;
+}
+.file-upload-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+}
+.file-upload-button:hover {
+    background-color: #0056b3;
+}

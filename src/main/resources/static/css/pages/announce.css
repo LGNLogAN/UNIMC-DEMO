@@ -1,0 +1,220 @@
+@import url('/css/components/header.css');
+
+.status-title {
+    font-family: 'SBAggroB', 'Noto Sans KR', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: start;
+}
+/* 서비스 상태 */
+.alerts-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;  /* Flex 아이템이 줄을 넘어가면 다음 줄로 배치 */
+}
+
+.alert {
+    flex: 1 1 calc(100% - 30px); /* 작은 화면에서는 100% 너비로, 여백 감안 */
+    max-width: 400px; /* 최대 너비 지정 */
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.alert:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.alert-text {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* 각 상태에 따른 스타일 */
+.alert-success {
+    background-color: #d1e7dd;
+    border-left: 4px solid #28a745;
+    color: #155724;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border-left: 4px solid #17a2b8;
+    color: #0c5460;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+
+@media (max-width: 768px) {
+    .alert {
+        flex: 1 1 calc(50% - 20px); /* 태블릿 사이즈: 두 개의 alert가 나란히 배치 */
+        max-width: none;
+        margin-bottom: 10px; /* 여백 추가 */
+    }
+}
+
+@media (max-width: 480px) {
+    .alert {
+        flex: 1 1 100%; /* 작은 화면에서는 하나씩 쌓이도록 */
+        margin-bottom: 10px; /* 여백 추가 */
+    }
+}
+/* 서비스 상태 */
+
+
+
+/*  */
+.announce-header {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.announce-option{
+    display : flex;
+    align-items: center;
+}
+
+.announce-header{
+    margin-bottom: 20px;
+
+}
+.announce-title {
+    font-family: 'SBAggroB', 'Noto Sans KR', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: start;
+}
+
+.announcements {
+    display: grid;
+    gap: 20px;
+}
+.announcement {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 9px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.announcement:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.announcement-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 20px;
+    font-family: 'S-CoreDream-3Light';
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.announcement-content {
+    padding: 20px;
+}
+.announcement-meta {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-family: 'Pretendard-Regular';
+}
+.announcement-body{
+    color: #34495e;
+    font-family: 'Pretendard-Regular';
+}
+.announcement:nth-child(2n) .announcement-header {
+    background-color: #e74c3c;
+}
+.announcement:nth-child(3n) .announcement-header {
+    background-color: #2ecc71;
+}
+
+.announce-write{
+	display : none;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-right : 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 37px;
+    font-family: 'S-CoreDream-3Light';
+}
+.announce-write:hover{
+    background-color: #2980b9;
+}
+
+/*  */
+
+/*  */
+.sort-container {
+    position: relative;
+}
+
+.sort {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.sort:hover {
+    background-color: #2980b9;
+}
+
+.dropdown {
+    width: 70px;
+    display: none;
+    position: absolute;
+    left : 40px;
+    top: 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    background-color: #3498db;
+    color : white;
+    font-family: 'S-CoreDream-3Light';
+    font-size : 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dropdown button:hover {
+    background-color: #2980b9;
+}
+/*  */

@@ -1,0 +1,109 @@
+.nav-bar{
+    display : flex;
+    width: 100%;
+    min-height: 70px;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.nav-content{
+    margin : 0 auto;
+    width : 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* --------------- */
+.nc-list a{
+    color : black;
+    text-decoration: none;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: bold;
+    font-size : 17px;
+    padding : 8px 10px;
+    transition: background-color 0.3s;
+}
+.nc-list a:hover{
+    background-color : #eeecec;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+/* --------------- */
+
+.nc-title a{
+    color : black;
+    text-decoration: none;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: bold;
+    font-size : 25px;
+}
+
+/* --------------- */
+.nc-account a{
+    color : black;
+    text-decoration: none;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-weight: bold;
+    font-size : 17px;
+    padding : 8px 10px;
+    transition: background-color 0.3s;
+}
+.nc-account a:hover{
+    background-color : #eeecec;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+/* --------------- */
+
+.nc-list {
+    display: flex;
+    gap : 30px;
+    transition: 0.2s;
+}
+.nc-account{
+    display : flex;
+}
+
+.navbarBtn{
+    display : none;
+}
+.nc-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width : 950px) {
+    .nc-list{
+        gap : 10px;
+    }
+}
+
+@media screen and (max-width : 850px){
+	.nav-content{
+        flex-direction: column;
+        width: 100%;
+        gap : 20px;
+        padding : 20px;
+    } 
+
+    .nc-list{
+        display : none;
+        width: 100%;
+        flex-direction: column;
+        text-align : center
+    }
+    .nc-account{
+        display : none;
+    }
+    .nc-title{
+        width: 100%;
+    }
+    .navbarBtn{
+        display : block
+    }
+
+    .nc-list.active , .nc-account.active {
+        display : flex;
+    }
+}

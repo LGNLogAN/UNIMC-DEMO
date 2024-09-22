@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<div th:fragment="nav">
+    <div class="nav-bar">
+        <div class="nav-content">
+            <div class="nc-title">
+                <a th:href="@{/}">마크대학</a>
+                <a href="#" class="navbarBtn">
+                    <svg width="30" height="30" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18h16M4 6h16H4Zm0 6h16H4Z"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="nc-list">
+                <a th:href="@{/announce}">공지사항</a>
+                <a th:href="@{/rule}">서버규칙</a>
+                <a th:href="@{/live}">라이브맵</a>
+                <a th:href="@{/FAQ}">FAQ</a>
+            </div>
+
+            <div class="nc-account">
+                <a th:href="@{/login}">로그인</a>
+                <a th:href="@{/register}">회원가입</a>
+                <a th:href="@{/mypage}">마이페이지</a>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

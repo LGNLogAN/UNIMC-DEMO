@@ -1,0 +1,781 @@
+header {
+    text-align: center;
+    margin: 0;
+    position: relative;
+    height: 1300px;
+    overflow: hidden;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:url('/img/mc_background.jpg');
+    background-size: cover;
+    filter: blur(8px) brightness(50%);
+    transform : scale(1.1);
+    z-index: -1;
+    border-image: fill 1 linear-gradient(#0001,#000);
+}
+.hc-main-title{
+    font-size : 64px;
+    font-weight: bold;
+    margin-top : 250px;
+    color : white;
+    opacity: 0;
+    transition: 3s;
+    font-family: 'SBAggroB';
+}
+.hc-main-line{
+    margin-top : 30px;
+    width : 0px;
+    transition: 1s;
+    color : white;
+}
+.hc-main-subTitle{
+    color : white;
+    font-size : 17px;
+    opacity: 1;
+    transition: 3s;
+    margin-top : 20px;
+    font-family: 'S-CoreDream-3Light';
+}
+
+.server-status{
+    margin : 0 auto;
+    margin-top : 250px;
+    width: 1000px;
+    height: 150px;
+    border : 1px solid white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+}
+.server-content{
+    width: 100%;
+    height: 60%;
+    display : flex;
+    justify-content: space-between;
+    padding : 40px;
+    color : white;
+    font-size: 35px;
+    font-family: SBAggroB;
+}
+.server-title{
+    display : flex;
+    align-items: center;
+}
+.server-OnOff-light{
+    width : 20px;
+    height: 20px;
+    border-radius: 100%;
+    /* background-color: green; */
+    background-color: red;
+    margin-right : 10px;
+}
+.server-crossLine{
+    margin : 0 20px;
+}
+
+.server-userCount{
+    display:flex;
+    align-items: center;
+}
+
+section{
+    margin-top : -150px;
+    background-color: white;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.server-produce-section{
+    width: 80%;
+    margin : 150px auto;
+    max-width: 1400px;
+}
+.main-content-title{
+    height: 80px;
+}
+.main-content-title .mct-title{
+    font-family: BMHANNAPro;
+    margin-left : -10px;
+    font-size: 50px;
+}
+.main-content-title .mct-description{
+    font-family: BMHANNAPro;
+    font-size: 20px;
+    margin : 25px 0;
+    text-align: right;
+}
+/* 메인 타이틀 애니메이션 */ 
+
+.section-main-title {
+    display: block;
+    position: sticky;
+    overflow: hidden;
+    font-family: BMHANNAPro;
+    font-size: 60px;
+    color: #000000;
+}
+.smt-container {
+    font-weight: 600;
+    height: 40px;
+}
+.smt-container-text {
+    display: inline;
+    float: left;
+    margin: 0;
+}
+.smt-container-text-list{
+    margin-top: 0;
+    padding-left: 300px;
+    text-align: left;
+    list-style: none;
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.smt-container-text-list-item {
+    margin: 0;
+}
+@keyframes change {
+    0%, 12.66%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    
+    16.66%, 29.32% {
+        transform: translate3d(0, -25%, 0);
+    }
+    
+    33.32%, 45.98% {
+        transform: translate3d(0, -50%, 0);
+    }
+    
+    49.98%, 62.64% {
+        transform: translate3d(0, -75%, 0);
+    }
+    
+    66.64%, 79.3% {
+        transform: translate3d(0, -50%, 0);
+    }
+    
+    83.3%, 95.96% {
+        transform: translate3d(0, -25%, 0);
+    }
+}
+
+
+/* 💡 메인 대표 컨텐츠 */
+.main-content-cards{
+    display: flex;
+    justify-content: space-between;
+}
+.main-content-cards a{
+    text-decoration: none;
+    color : white;
+}
+.card-1 , .card-3{
+    margin-top : 60px;
+}
+.card-2 , .card-4{
+    margin-top : 60px;
+}
+/* 💡 메인 대표 컨텐츠 */
+
+/* 💡 메인 대표 컨텐츠 card-1 */
+.card1-background{
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+}
+.card1-background::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/MC_BACKGROUND2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transform: scale(1.1);
+    filter: blur(4px) brightness(50%);
+    transition: .5s ease-in-out;
+}
+.card-1 a:hover .card1-background::before{
+    background-image: url('/img/mc_background.jpg');
+    filter: brightness(50%);
+    transform: scale(1.1);
+}
+.card1-keyword {
+    font-family: RPGFont;
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+.card-1 a:hover .card1-keyword {
+    opacity: 0;
+}
+.card1-content {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    padding : 20px;
+    transition: .3s ease-in-out;
+    font-family: SBAggroB;
+    font-size : 20px;
+}
+.card-1 a:hover .card1-content {
+    opacity: 1;
+}
+/* 💡 메인 대표 컨텐츠 card-1 */
+
+/* 💡 메인 대표 컨텐츠 card-2 */
+.card2-background{
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+}
+.card2-background::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/MC_BACKGROUND2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transform: scale(1.1);
+    filter: blur(4px) brightness(50%);
+    transition: .5s ease-in-out;
+}
+.card-2 a:hover .card2-background::before {
+    background-image: url('/img/mc_background.jpg');
+    filter: brightness(50%);
+    transform: scale(1.1);
+}
+.card2-keyword {
+    font-family: RPGFont;
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+.card-2 a:hover .card2-keyword {
+    opacity: 0;
+}
+.card2-content {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    padding : 20px;
+    transition: .3s ease-in-out;
+    font-family: SBAggroB;
+    font-size : 20px;
+}
+.card-2 a:hover .card2-content {
+    opacity: 1;
+}
+/* 💡 메인 대표 컨텐츠 card-2 */
+
+/* 💡 메인 대표 컨텐츠 card-3 */
+.card3-background{
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+}
+.card3-background::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/MC_BACKGROUND2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transform: scale(1.1);
+    filter: blur(4px) brightness(50%);
+    transition: .5s ease-in-out;
+}
+.card-3 a:hover .card3-background::before{
+    background-image: url('/img/mc_background.jpg');
+    filter: brightness(50%);
+    transform: scale(1.1);
+}
+.card3-keyword {
+    font-family: RPGFont;
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+.card-3 a:hover .card3-keyword {
+    opacity: 0;
+}
+.card3-content {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    padding : 20px;
+    transition: .3s ease-in-out;
+    font-family: SBAggroB;
+    font-size : 20px;
+}
+.card-3 a:hover .card3-content {
+    opacity: 1;
+}
+/* 💡 메인 대표 컨텐츠 card-3 */
+
+/* 💡 메인 대표 컨텐츠 card-4 */
+.card4-background{
+    width: 300px;
+    height: 400px;
+    background-color: aqua;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    transition: 1s;
+}
+.card4-background::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/MC_BACKGROUND2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    transform: scale(1.1);
+    filter: blur(4px) brightness(50%);
+    transition: .5s ease-in-out;
+}
+.card-4 a:hover .card4-background::before{
+    background-image: url('/img/mc_background.jpg');
+    filter: brightness(50%);
+    transform: scale(1.1);
+}
+.card4-keyword {
+    font-family: RPGFont;
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+.card-4 a:hover .card4-keyword {
+    opacity: 0;
+}
+.card4-content {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    padding : 20px;
+    transition: .3s ease-in-out;
+    font-family: SBAggroB;
+    font-size : 20px;
+}
+.card-4 a:hover .card4-content {
+    opacity: 1;
+}
+/* 💡 메인 대표 컨텐츠 card-4 */
+
+.produce-container {
+    width: 100%;
+    height: 100%;
+}
+
+.produce-container .pc-title {
+    font-family: BMHANNAPro;
+    font-size: 50px;
+    margin-left : -10px; /* 이모티콘 자체 패딩 제거 */
+}
+
+.produce-container .pc-content {
+    margin-top: 30px;
+    font-size: 30px;
+    height: 3000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.pc-description{
+    font-family: BMHANNAPro;
+    font-size: 25px;
+}
+.c1-text-box , .c2-text-box , .c3-text-box , .c4-text-box , .c5-text-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.c1-text , .c2-text , .c3-text , .c4-text , .c5-text{
+    font-family: BMHANNAPro;
+} 
+
+/* 📜 서버 Card 1  */
+.send-mail{
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+.produce-container .pc-content .card1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.produce-container .pc-content .card1 .c1-container {
+    width: 600px;
+    height: 250px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow:  -20px 20px 60px #bebebe , 20px -20px 60px #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-Test-Box {
+    width: 90%;
+    max-width: 650px;
+    height: 75%;
+    background-color: #f7fafc;
+    border-radius: 30px;
+    padding: 24px;
+    text-align: center;
+}
+
+.email-Test-title {
+    font-family: NEXON Lv1 Gothic OTF;
+    font-size: 30px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 25px;
+}
+
+.email-Test-input {
+    width: 85%;
+    background-color: #edf2f7;
+    color: #2d3748;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    font-size : 14px;
+    padding: 12px;
+    margin-bottom: 30px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.email-Test-input:focus {
+    background-color: #e2e8f0;
+    outline: none;
+}
+
+.email-Test-Submit {
+    width: 90%;
+    background-color: #4299e1;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.email-Test-Submit:hover {
+    background-color: #2b6cb0;
+}
+
+.email-Test-SubTitle {
+    font-family: NEXON Lv1 Gothic OTF;
+    font-size: 12px;
+    color: #718096;
+    margin-top: 8px;
+    display: block;
+}
+/* 📜 서버 Card 1  */
+
+
+/* 📜 서버 Card 2  */
+.produce-container .pc-content .card2{
+    display: flex;
+    justify-content: space-between;
+}
+.produce-container .pc-content .card2 .c2-container{
+    width: 700px;
+    height: 500px;
+    background-color: aqua;
+    border-radius: 40px;
+    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
+}
+.mic-icon{
+    margin: 10px auto;
+}
+/* 📜 서버 Card 2  */
+
+/* 📜 서버 Card 3  */
+.produce-container .pc-content .card3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.produce-container .pc-content .card3 .c3-container{
+    width: 700px;
+    height: 400px;
+    background-color: aqua;
+    box-shadow:  -20px 20px 60px #bebebe , 20px -20px 60px #ffffff;
+    border-radius: 40px;
+}
+/* 📜 서버 Card 3  */
+
+/* 📜 서버 Card 4  */
+.produce-container .pc-content .card4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.produce-container .pc-content .card4 .c4-container{
+    width: 700px;
+    height: 300px;
+    background-color: aqua;
+    box-shadow:  20px 20px 60px #bebebe,-20px -20px 60px #ffffff;
+    border-radius: 40px;
+}
+/* 📜 서버 Card 4  */
+
+/* 📜 서버 Card 5  */
+.produce-container .pc-content .card5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.produce-container .pc-content .card5 .c5-container{
+    width: 700px;
+    height: 400px;
+    background-color: aqua;
+    box-shadow:  -20px 20px 60px #bebebe , 20px -20px 60px #ffffff;
+    border-radius: 40px;
+}
+
+/* 📜 서버 Card 5  */
+
+
+/* ⚠️ 규칙사항 */
+.rule-container {
+    width: 100%;
+    height: 100%;
+}
+.rule-container .rc-title{
+    font-family: BMHANNAPro;
+    font-size: 50px;
+    margin-left : -10px; /* 이모티콘 자체 패딩 제거 */
+}
+.rc-description{
+    font-family: BMHANNAPro;
+    font-size: 25px;
+}
+.rc-content{
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: BMHANNAPro;
+}
+.rc-comment {
+    margin-top: 30px;
+    padding: 10px 15px;
+    background-color: #fae9e9;
+    border-left: 4px solid #3498db;
+    font-family: S-CoreDream-3Light;
+    font-style: italic;
+    font-size : 20px;
+}
+.rc-rules-list {
+    list-style-type: '🚫';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap : 20px;
+    font-size : 35px;
+}
+.rc-rules-list li {
+    padding-left: 20px;;
+}
+/* ⚠️ 규칙사항 */
+
+
+/* 가입배너 */
+.banner-container{
+    margin : 0 auto;
+    margin-top : 150px;
+    max-width: 1400px;
+    height: 300px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bc-embed{
+    font-family: BMHANNAPro;
+    padding : 20px;
+    width: 50%;
+
+}
+.bc-title{
+    font-size : 20px;
+}
+.bc-content{
+    font-size : 40px;
+}
+.bc-steveLogo {
+    overflow: hidden;
+}
+.bc-steveLogo img{
+	width: 100%;
+}
+.bc-signUp{
+    margin-top : 60px;
+}
+
+button.signUpButton {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    width: 12rem;
+    height: auto;
+}
+
+button.signUpButton .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 1.625rem;
+}
+
+button.signUpButton .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.signUpButton .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+button.signUpButton .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+} 
+button.signUpButton .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1;
+    font-size : 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
+/* 가입배너 */
+
+/* 파티클 텍스트 박스 */
+.particles-text-box {
+    margin-top : 300px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #ffffff;
+}
+.particles{
+    width: 100%;
+    height: 300px;
+}
+.particles-text {
+    position: absolute;
+    z-index: 10;
+    font-weight: bold;
+    color: #000000;
+    background: linear-gradient(to bottom, black, gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size : 90px;
+}
+
+/* 파티클 텍스트 박스 */
