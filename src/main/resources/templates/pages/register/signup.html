@@ -2,20 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Untitled 서버</title>
-	<!-- CSS -->
-	<link rel="stylesheet" th:href=" @{/css/style.css}">
-	<link rel="stylesheet" th:href=" @{/css/pages/signup.css} ">
-	<!-- CSS -->
-	
-	<!-- Script -->
-	<script th:src="@{/script/script.js}" defer></script>
-	<script type="module" th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}" defer></script>
-	<script nomodule th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}" defer></script>
-	<!-- Script -->
+<title>UNIMC - UNIVERSITY MC SERVER</title>
+<meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- CSS -->
+<link rel="stylesheet" th:href=" @{/css/style.css}">
+<link rel="stylesheet" th:href=" @{/css/pages/signup.css} ">
+<!-- CSS -->
+
+<!-- Script -->
+<script th:src="@{/script/script.js}" defer></script>
+<script type="module" th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}" defer></script>
+<script nomodule th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}" defer></script>
+<!-- Script -->
 </head>
 <body>
 	<nav>
@@ -39,7 +38,7 @@
 					<div class="description">서버를 플레이하는데 꼭 필요한 정보이므로 정확하게 입력해주세요 !</div>
 				</div>
 				
-				<form action="" class="signup-form">
+				<form th:action="@{/signup}" class="signup-form" method="post">
         			<div class="input-group">
         				<label for="name">이름</label>
         				<div class="input-form">
@@ -51,7 +50,7 @@
         				<label for="name">마인크래프트 닉네임</label>
         				<div class="input-form">
 		                    <ion-icon name="person-outline" class="tagIcon"></ion-icon>
-		                    <input id="mcname" name="mcname" type="text" placeholder="마인크래프트 닉네임을 입력해주세요 !" autocomplete="off">
+		                    <input id="mcname" name="mcName" type="text" placeholder="마인크래프트 닉네임을 입력해주세요 !" autocomplete="off">
 		                </div>
         			</div>
         			<div class="input-group">
@@ -59,7 +58,7 @@
 	        				<div class="input-form">
 	        					<div class="input-form-section">
 			        				<ion-icon name="at-outline" class="tagIcon"></ion-icon>
-				                    <input id="email" name="email" type="text" placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off">
+				                    <input id="email" name="uniEmail" type="text" placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off">
 				                </div>
 		                		<button class="btn-send">코드전송</button>
                 			</div>

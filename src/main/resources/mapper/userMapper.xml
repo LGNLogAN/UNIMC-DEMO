@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.application.unimc.dao.UserDAO">
+
+<insert id="signup" parameterType="UserDTO">
+    INSERT INTO USER (UNI_EMAIL, NAME, MC_NAME, PASSWORD, UNIVERSITY, MAJOR, CAMPUS, EVERYTIME)
+    VALUES (#{uniEmail}, #{name}, #{mcName}, #{password}, '서울대학교', #{major}, #{campus}, #{everytime})
+</insert>
+</mapper>
