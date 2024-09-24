@@ -34,7 +34,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void simpleSignup() {
 		// TODO 이미지 텍스트화 모든 로그인 기능 구현 후 구현
-		
 	}
 
 	@Override
@@ -47,7 +46,6 @@ public class UserServiceImpl implements UserService {
 				return true;
 			}
 		}
-		System.out.println(userValid);
 		return false;
 	}
 }

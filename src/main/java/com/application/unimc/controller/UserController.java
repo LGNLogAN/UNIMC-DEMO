@@ -32,7 +32,7 @@ public class UserController {
 	public String login(@RequestBody UserDTO userDTO , HttpServletRequest request) {
 		
 		String isValidUser = "n";
-		System.out.println("컨트롤러" + userDTO.getUniEmail() + userDTO.getPassword());
+		System.out.println("UserController{login} : " + userDTO.getUniEmail() + userDTO.getPassword());
 		
 		if(userService.login(userDTO)) {
 			HttpSession session = request.getSession();
