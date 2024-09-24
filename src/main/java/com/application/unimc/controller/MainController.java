@@ -50,7 +50,7 @@ public class MainController {
 	}
 	@GetMapping("/simplesignup")
 	public String simpleSignup() {
-		return "pages/register/simpleSignup";
+		return "pages/register/simplesignup";
 	}
 	
 }
