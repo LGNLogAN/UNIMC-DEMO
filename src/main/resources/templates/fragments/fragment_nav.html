@@ -11,18 +11,37 @@
                 </a>
             </div>
 
-            <div class="nc-list">
-                <a th:href="@{/announce}">공지사항</a>
-                <a th:href="@{/rule}">서버규칙</a>
-                <a th:href="@{/live}">라이브맵</a>
-                <a th:href="@{/FAQ}">FAQ</a>
-            </div>
-
-            <div class="nc-account">
-                <a th:href="@{/login}">로그인</a>
-                <a th:href="@{/register}">회원가입</a>
-                <a th:href="@{/mypage}">마이페이지</a>
-            </div>
+            
+            <th:block th:if="${session.uniEmail == null}">
+	            <div class="nc-list">
+	                <a th:href="@{/announce}">공지사항</a>
+	                <a th:href="@{/rule}">서버규칙</a>
+	                <a th:href="@{/live}">라이브맵</a>
+	                <a th:href="@{/FAQ}">FAQ</a>
+	                <a th:href="@{/schedule}">스케쥴</a>
+	            </div>
+	
+	            <div class="nc-account">
+	                <a th:href="@{/login}">로그인</a>
+	                <a th:href="@{/register}">회원가입</a>
+	            </div>
+            </th:block>
+            
+            <th:block th:unless="${session.uniEmail == null}">
+	            <div class="nc-list">
+	                <a th:href="@{/announce}">공지사항</a>
+	                <a th:href="@{/rule}">서버규칙</a>
+	                <a th:href="@{/live}">라이브맵</a>
+	                <a th:href="@{/FAQ}">FAQ</a>
+	                <a th:href="@{/schedule}">스케쥴</a>
+	            </div>
+	
+	            <div class="nc-account">
+	                <a th:href="@{/signOut}">로그아웃</a>
+	                <a th:href="@{/mypage}">마이페이지</a>
+	            </div>
+	            
+            </th:block>
         </div>
     </div>
 </div>

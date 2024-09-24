@@ -4,6 +4,12 @@
 
 <insert id="signup" parameterType="UserDTO">
     INSERT INTO USER (UNI_EMAIL, NAME, MC_NAME, PASSWORD, UNIVERSITY, MAJOR, CAMPUS, EVERYTIME)
-    VALUES (#{uniEmail}, #{name}, #{mcName}, #{password}, '서울대학교', #{major}, #{campus}, #{everytime})
+    VALUES (#{uniEmail}, #{name}, #{mcName}, #{password}, #{university}, #{major}, #{campus}, #{everytime})
 </insert>
+
+<select id="login" parameterType="String" resultType="UserDTO">
+	SELECT PASSWORD
+	FROM USER
+	WHERE UNI_EMAIL = #{userId}
+</select>
 </mapper>
