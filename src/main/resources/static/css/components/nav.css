@@ -57,7 +57,7 @@
 
 .nc-list {
     display: flex;
-    gap : 30px;
+    gap : 1.5rem;
     transition: 0.2s;
 }
 .nc-account{

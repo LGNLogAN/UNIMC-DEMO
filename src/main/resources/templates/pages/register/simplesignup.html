@@ -14,8 +14,9 @@
 <!-- CSS -->
 
 <!-- Script -->
-<script th:src="@{/script/script.js}" defer></script>
-<script th:src="@{/script/simplesignup.js}" defer></script>
+<script th:src="@{/script/common/js/script.js}" defer></script>
+<script th:src="@{/script/common/js/email_regex.js}" defer></script>
+<script th:src="@{/script/pages/simplesignup.js}" defer></script>
 <script type="module"th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}"defer></script>
 <script nomoduleth:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}"defer></script>
 <!-- Script -->
@@ -97,8 +98,7 @@
 						<div class="input-form">
 							<div class="input-form-section">
 								<ion-icon name="at-outline" class="tagIcon"></ion-icon>
-								<input id="email" name="email" type="text"
-									placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off">
+								<input id="email" name="uniEmail" type="text" placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off">
 							</div>
 							<button class="btn-send">코드전송</button>
 						</div>

@@ -79,6 +79,14 @@ h1 {
     flex-direction: column;
     gap: 20px;
 }
+@media (max-width : 850px){
+	.signup-form {
+	    display: flex;
+	    width: 100%;
+	    flex-direction: column;
+	    gap: 20px;
+	}
+}
 @media (max-width : 768px){
 	.signup-form {
 	    display: flex;
@@ -129,6 +137,7 @@ h1 {
 }
 
 .authentication-pass , .authentication-fail{
+	display : none;
 	font-size : 12px;
 }
 .authentication-pass{

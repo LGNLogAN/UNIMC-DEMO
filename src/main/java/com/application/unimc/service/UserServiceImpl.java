@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 	public void signup(UserDTO userDTO) {
 		
 		userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-		userDTO.setUniversity(uniAuth.univerysityNameCheck());
+		userDTO.setUniversity(uniAuth.univerysityNameCheck(userDTO.getUniEmail()));
 		
 		userDAO.signup(userDTO);
 		
