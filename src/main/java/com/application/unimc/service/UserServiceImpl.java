@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 	public boolean login(UserDTO userDTO) {
 		
 		UserDTO userValid = userDAO.login(userDTO.getUniEmail());
-		System.out.println(userDTO.getUniEmail()+userDTO.getPassword());
+		//System.out.println(userDTO.getUniEmail()+userDTO.getPassword());
 		if(userValid != null) {
 			if(passwordEncoder.matches(userDTO.getPassword(),userValid.getPassword())) {
 				return true;

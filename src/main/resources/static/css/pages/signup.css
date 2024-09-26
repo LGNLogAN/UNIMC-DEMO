@@ -1,4 +1,15 @@
 @import url('/css/components/header.css');
+.section-container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top : 40px;
+    margin-bottom : 150px;
+}
+.error-message{
+	color : red;
+	text-align: end;
+}
 .tagIcon{
 	margin-left : 5px;
 }
@@ -74,7 +85,7 @@ h1 {
 }
 .signup-form {
     display: flex;
-    width: 70%;
+    width: 80%;
     margin : 0 auto;
     flex-direction: column;
     gap: 20px;
@@ -149,6 +160,7 @@ h1 {
  	color : red;
 }
 .input-form-auth{
+	display : none;
 	margin-top : 20px;
 }
 .input-form-code{

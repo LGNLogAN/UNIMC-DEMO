@@ -12,12 +12,17 @@
 
 <!-- Script -->
 <script th:src="@{/script/common/js/script.js}" defer></script>
-<script th:src="@{/script/common/js/email_regex.js}" defer></script>
+<script th:src="@{/script/common/js/fieldValidation.js}" defer></script>
+<script th:src="@{/script/pages/signup.js}" defer></script>
+<script th:src="@{/script/jquery/jquery-3.7.1.min.js}"></script>
 <script type="module" th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}" defer></script>
 <script nomodule th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}" defer></script>
 <!-- Script -->
 </head>
 <body>
+<div id="loading-screen" style="display: none;">
+	    <div class="loader">로딩 중...</div>
+</div>
 	<nav>
 		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
 	</nav>
@@ -44,22 +49,24 @@
         				<label for="name">이름</label>
         				<div class="input-form">
 		                    <ion-icon name="person-outline" class="tagIcon"></ion-icon>
-		                    <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." autocomplete="off">
+		                    <input id="name" name="name" type="text" placeholder="이름을 입력해주세요." autocomplete="off" required="required" maxlength="10">
 		                </div>
+        				<span id="error-message-name" class="error-message name"></span>
         			</div>
         			<div class="input-group">
         				<label for="name">마인크래프트 닉네임</label>
         				<div class="input-form">
 		                    <ion-icon name="person-outline" class="tagIcon"></ion-icon>
-		                    <input id="mcname" name="mcName" type="text" placeholder="마인크래프트 닉네임을 입력해주세요 !" autocomplete="off">
+		                    <input id="mcname" name="mcName" type="text" placeholder="마인크래프트 닉네임을 입력해주세요 !" autocomplete="off" required="required">
 		                </div>
+		                <span id="error-message-mcname" class="error-message mcname"></span>
         			</div>
         			<div class="input-group">
         				<label for="email">대학교 이메일</label>
 	        				<div class="input-form">
 	        					<div class="input-form-section">
 			        				<ion-icon name="at-outline" class="tagIcon"></ion-icon>
-				                    <input id="email" name="uniEmail" type="text" placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off">
+				                    <input id="email" name="uniEmail" type="text" placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off" required="required">
 				                </div>
 		                		<button class="btn-send">코드전송</button>
                 			</div>
@@ -71,24 +78,24 @@
 	                		
 	                		<div class="input-form-code">
 	                			<ion-icon name="key-outline" class="tagIcon"></ion-icon>
-	                			<input id="code" name="code" type="text" placeholder="인증코드" autocomplete="off">
+	                			<input id="code" name="code" type="text" placeholder="인증코드" autocomplete="off" required="required">
 	                			<button class="btn-check">확인</button>
 	                		</div>
 	                	</div>
         			</div>
         			<div class="input-group">
         				<label for="password">비밀번호</label>
-        				<span class="authentication-pass">비밀번호가 일치합니다.</span>
-                		<span class="authentication-fail">비밀번호가 일치하지않습니다.</span>
+        				<span class="authentication-pass" id="password-match-pass"></span>
+                		<span class="authentication-fail" id="password-match-fail"></span>
         				<div class="input-form">
         					<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
-		                    <input id="password" name="password" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off">
+		                    <input id="password" name="password" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off" required="required">
 		                </div> 
 		                <div class="description">저희 서버는 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」에 따라 모든 비밀번호를 안전하게 암호화하여 처리하고 있습니다.</div>
         				<label for="password_check">비밀번호 재확인</label>
         				<div class="input-form">
         					<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
-		                    <input id="password_check" name="password_check" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off">
+		                    <input id="password_check" name="password_check" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off" required="required">
 		                </div> 
         			
         			</div>
@@ -97,7 +104,7 @@
         				<label for="major">전공</label>
         				<div class="input-form">
 		                    <ion-icon name="school-outline" class="tagIcon"></ion-icon>
-		                    <input id="major" name="major" type="text" placeholder="전공을 적어주세요." autocomplete="off">
+		                    <input id="major" name="major" type="text" placeholder="전공을 적어주세요." autocomplete="off" required="required">
 		                </div>
         			</div>
         			<div class="input-group">
