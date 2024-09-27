@@ -3,8 +3,30 @@
 <mapper namespace="com.application.unimc.dao.UserDAO">
 
 <insert id="signup" parameterType="UserDTO">
-    INSERT INTO USER (UNI_EMAIL, NAME, MC_NAME, PASSWORD, UNIVERSITY, MAJOR, CAMPUS, EVERYTIME)
-    VALUES (#{uniEmail}, #{name}, #{mcName}, #{password}, #{university}, #{major}, #{campus}, #{everytime})
+    INSERT INTO USER
+    
+    (
+	    UNI_EMAIL, 
+	    NAME, 
+	    MC_NAME, 
+	    PASSWORD, 
+	    UNIVERSITY, 
+	    MAJOR, 
+	    CAMPUS, 
+	    EVERYTIME
+	    )
+	    VALUES 
+    (
+	    #{uniEmail}, 
+	    #{name}, 
+	    #{mcName}, 
+	    #{password}, 
+	    #{university}, 
+	    #{major}, 
+	    #{campus}, 
+	    #{everytime}
+    )
+    
 </insert>
 
 <select id="login" parameterType="String" resultType="UserDTO">
@@ -12,4 +34,11 @@
 	FROM USER
 	WHERE UNI_EMAIL = #{userId}
 </select>
+
+<select id="isEmailExists" parameterType="String" resultType="String">
+	SELECT UNI_EMAIL
+	FROM USER
+	WHERE UNI_EMAIL = #{uniEmail}
+</select>
+
 </mapper>

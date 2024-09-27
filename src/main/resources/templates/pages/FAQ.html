@@ -13,15 +13,14 @@
 
     <!-- Script -->
     <script th:src="@{/script/pages/FAQ.js}" defer></script>
+    <script th:src="@{/script/common/js/preloader.js}" defer></script>
     <script th:src="@{/script/jquery/jquery-3.7.1.min.js}"></script>
     <script th:src="@{/script/common/js/script.js}" defer></script>
     <!-- Script -->
 </head>
 
 <body>
-<div id="loading-screen" style="display: none;">
-    <div class="loader">로딩 중...</div>
-</div>
+<th:block th:replace="~{fragments/fragment_preloader :: preloader}"></th:block>
 <nav>
 	<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
 </nav>

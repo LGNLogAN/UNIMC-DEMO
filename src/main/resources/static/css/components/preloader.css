@@ -1,0 +1,85 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure preloader is on top */
+    backdrop-filter: blur(5px); /* Blurs the background */
+    opacity: 1; /* 초기 불투명도 */
+    transition: opacity 0.5s ease; /* 페이드 아웃 효과 */
+}
+
+.preloader.hidden {
+    opacity: 0; /* 숨길 때 불투명도 */
+    pointer-events: none; /* 클릭 이벤트를 비활성화 */
+}
+
+.content {
+    display: none;
+    opacity: 0; /* 초기 불투명도 */
+    transition: opacity 0.5s ease; /* 페이드 인 효과 */
+}
+
+.content.visible {
+    display: block; /* 콘텐츠를 표시하기 위한 클래스 */
+    opacity: 1; /* 완전 불투명도 */
+}
+
+.loader {
+    display: inline-block;
+    margin: 0 16px;
+    width: 44px;
+    height: 44px;
+    position: relative;
+}
+
+.loader:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: #fb992b;
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.loader svg rect {
+    fill: none;
+    stroke: #2f3545;
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+@keyframes dotRect {
+    25% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(18px, -18px);
+    }
+
+    75% {
+        transform: translate(0, -36px);
+    }
+
+    100% {
+        transform: translate(-18px, -18px);
+    }
+}

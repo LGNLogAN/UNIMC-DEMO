@@ -15,15 +15,14 @@
 
     <!-- Script -->
     <script th:src="@{/script/common/js/script.js}" defer></script>
+    <script th:src="@{/script/common/js/preloader.js}" defer></script>
     <script type="module" th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}" defer></script>
 	<script nomodule th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}" defer></script>
     <!-- Script -->
 </head>
 
 <body>
-<div id="loading-screen" style="display: none;">
-	    <div class="loader">로딩 중...</div>
-	</div>
+<th:block th:replace="~{fragments/fragment_preloader :: preloader}"></th:block>
     <nav>
 		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
 	</nav>

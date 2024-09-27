@@ -2,6 +2,7 @@
 @import url('/css/components/footer.css');
 @import url('/css/components/font.css');
 @import url('/css/components/base.css');
+@import url('/css/components/preloader.css');
 html{
 	font-size : 14px;
 }

@@ -9,4 +9,5 @@ public interface UserDAO {
 	public void signup(UserDTO userDTO);
 	public void simpleSignup();
 	public UserDTO login(String userId);
+	public String isEmailExists(String uniEmail);
 }

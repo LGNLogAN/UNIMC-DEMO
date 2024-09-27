@@ -48,4 +48,22 @@ public class UserServiceImpl implements UserService {
 		}
 		return false;
 	}
+
+	@Override
+	public boolean isEmailExists(String uniEmail) {
+		boolean isEmailExists = false;
+		if(userDAO.isEmailExists(uniEmail) != null) {
+			isEmailExists = true;
+		}else {
+			isEmailExists = false;
+		}
+		return isEmailExists;
+	}
+			
+			
+			
+			
+			
+			
+			
 }

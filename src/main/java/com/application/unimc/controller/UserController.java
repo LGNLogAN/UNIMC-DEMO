@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.application.unimc.auth.UniAuth;
 import com.application.unimc.dto.UserDTO;
 import com.application.unimc.service.UserService;
 
@@ -19,6 +21,8 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	@Autowired
+	private UniAuth uniAuth;
 	
 	@PostMapping("/signup")
 	public String signup(@ModelAttribute UserDTO userDTO) {
@@ -49,5 +53,20 @@ public class UserController {
 		HttpSession session = request.getSession();
 		session.invalidate();
 		return "redirect:/announce";
+	}
+	
+	@GetMapping("/emailCheck")
+	@ResponseBody
+	public String emailCheck(@RequestParam("uniEmail") String uniEmail) {
+		String emailCheckResult = "pass";
+		boolean isEmailDuplicate = userService.isEmailExists(uniEmail);
+		
+		if(isEmailDuplicate) {
+			emailCheckResult = "Duplicate";
+		}else if(uniAuth.univerysityNameCheck(uniEmail) == null) {
+			emailCheckResult = "NotFound";
+		}
+		
+		return emailCheckResult;
 	}
 }

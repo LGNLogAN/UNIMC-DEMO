@@ -1,5 +1,7 @@
 @import url('/css/components/header.css');
-
+ html {
+        font-size: 10px; /* 모바일 크기 */
+    }
 .status-title {
     font-family: 'SBAggroB', 'Noto Sans KR', sans-serif;
     font-size: 2.5rem;

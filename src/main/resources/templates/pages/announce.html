@@ -10,18 +10,16 @@
     <link rel="stylesheet" th:href=" @{/css/style.css}">
     <link rel="stylesheet" th:href=" @{/css/pages/announce.css} ">
     <!-- CSS -->
-
+	
     <!-- Script -->
+ 	<script th:src="@{/script/common/js/preloader.js}" defer></script>
     <script th:src="@{/script/jquery/jquery-3.7.1.min.js}"></script>
     <script th:src="@{/script/common/js/script.js}" defer></script>
     <script th:src="@{/script/pages/announce.js}" defer></script>
     <!-- Script -->
 </head>
-
 <body>
-	<div id="loading-screen" style="display: none;">
-	    <div class="loader">로딩 중...</div>
-	</div>
+	<th:block th:replace="~{fragments/fragment_preloader :: preloader}"></th:block>
     <nav>
 		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
 	</nav>
@@ -137,7 +135,7 @@
                             <div class="announcement-meta">
                                 작성일: 2023년 6월 15일 | 작성자: 관리자
                             </div>
-                            <div class="announcement_body">
+                            <div class="announcement-body">
                                 <p>6월 20일 오전 2시부터 4시까지 서버 점검이 예정되어 있습니다. 해당 시간 동안 서비스 이용이 제한될 수 있으니 양해 부탁드립니다.</p>
                             </div>
                         </div>

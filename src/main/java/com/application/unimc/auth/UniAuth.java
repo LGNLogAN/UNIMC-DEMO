@@ -17,8 +17,6 @@ public class UniAuth {
 		String university = "";
 		JSONParser parser = new JSONParser();
 		Reader reader = null;
-		
-		
 		try {
 			reader = new InputStreamReader(getClass().getResourceAsStream("/static/data/university_domains.json"));
 			JSONObject jsonObject = (JSONObject) parser.parse(reader);
