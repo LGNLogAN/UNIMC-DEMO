@@ -2,12 +2,12 @@
 
 .container {
     max-width: 1500px;
-    margin: 100px auto;
+    margin: 0 auto;
     padding : 10px; 
 }
 .container-detail{
     max-width: 1000px;
-    margin: 100px auto;
+    margin: 50px auto;
     margin-bottom: 200px;
     padding : 10px; 
 }

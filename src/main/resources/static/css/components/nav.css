@@ -86,7 +86,6 @@
         gap : 20px;
         padding : 20px;
     } 
-
     .nc-list{
         display : none;
         width: 100%;
@@ -102,7 +101,6 @@
     .navbarBtn{
         display : block
     }
-
     .nc-list.active , .nc-account.active {
         display : flex;
     }

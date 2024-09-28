@@ -52,6 +52,7 @@ public class UserController {
 	public String signOut(HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		session.invalidate();
+		System.out.println("Session Out");
 		return "redirect:/announce";
 	}
 	
@@ -66,7 +67,7 @@ public class UserController {
 		}else if(uniAuth.univerysityNameCheck(uniEmail) == null) {
 			emailCheckResult = "NotFound";
 		}
-		
+		System.out.println("emailCheck");
 		return emailCheckResult;
 	}
 }

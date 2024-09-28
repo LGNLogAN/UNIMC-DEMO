@@ -9,13 +9,13 @@ html{
 
 @media (max-width: 768px) {
     html {
-        font-size: 12px; /* 태블릿 크기 */
+        font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
     html {
-        font-size: 12px; /* 모바일 크기 */
+        font-size: 12px;
     }
 }
 #loading-screen {

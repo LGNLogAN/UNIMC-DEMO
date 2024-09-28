@@ -1,19 +1,9 @@
 @import url('/css/components/header.css');
 
-@media (max-width: 1000px) {
-    .container {
-        flex-direction: column;
-    }
-    .faq-container{
-        margin : 0 auto;
-    }
-    .ask-container{
-        margin : 0 auto;
-    }
-}
 .container{
 	display : flex;
 	justify-content: space-around;
+	gap : 30px;
 }
 /* 🤖 디스코드 🤖 */
 .profile-container {
@@ -100,7 +90,6 @@
 /* ❗FAQ❗ */
 .faq-container {
     max-width: 600px;
-    padding: 30px;
 }
 .faq-title {
     text-align: center;
@@ -145,17 +134,11 @@
     padding: 15px;
     max-height: 1000px;
 }
-@media (max-width: 600px) {
-    .faq-container {
-        padding: 20px;
-    }
-}
 /* ❗FAQ❗ */
 
 
 .ask-container{
     max-width: 600px;
-    padding: 30px;
 }
 .ask-title{
     text-align: center;
@@ -200,8 +183,20 @@
     padding: 15px;
     max-height: 1000px;
 }
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+    .faq-container{
+        margin : 0 auto;
+    }
+    .ask-container{
+        margin : 0 auto;
+    }
+}
 @media (max-width: 600px) {
     .ask-container {
-        padding: 20px;
+    }
+    .faq-container {
     }
 }
