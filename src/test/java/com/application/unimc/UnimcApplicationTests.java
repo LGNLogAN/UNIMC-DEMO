@@ -11,8 +11,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.application.unimc.auth.UniAuth;
 import com.application.unimc.dao.UserDAO;
+import com.application.unimc.service.UniversityDomainCheckService;
 import com.application.unimc.service.UserService;
 
 
@@ -46,7 +46,7 @@ class UnimcApplicationTests {
 	@Autowired
 	private UserService userService;
 	@Autowired
-	private UniAuth uniAuth;
+	private UniversityDomainCheckService universityDomainCheckService;
 	
 	@Test
 	void isEmailDuplicate() {
@@ -57,7 +57,7 @@ class UnimcApplicationTests {
 		
 		if(isEmailDuplicate) {
 			emailCheckResult = "Duplicate";
-		}else if(uniAuth.univerysityNameCheck(uniEmail) == null) {
+		}else if(universityDomainCheckService.univerysityNameCheck(uniEmail) == null) {
 			emailCheckResult = "NotFound";
 		}
 		

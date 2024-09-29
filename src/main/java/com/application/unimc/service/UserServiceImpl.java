@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.application.unimc.auth.UniAuth;
 import com.application.unimc.dao.UserDAO;
 import com.application.unimc.dto.UserDTO;
 
@@ -15,7 +14,7 @@ public class UserServiceImpl implements UserService {
 	private UserDAO userDAO;
 	
 	@Autowired
-	private UniAuth uniAuth;
+	private UniversityDomainCheckService universityDomainCheckService;
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -24,7 +23,7 @@ public class UserServiceImpl implements UserService {
 	public void signup(UserDTO userDTO) {
 		
 		userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-		userDTO.setUniversity(uniAuth.univerysityNameCheck(userDTO.getUniEmail()));
+		userDTO.setUniversity(universityDomainCheckService.univerysityNameCheck(userDTO.getUniEmail()));
 		
 		userDAO.signup(userDTO);
 		

@@ -1,4 +1,4 @@
-package com.application.unimc.auth;
+package com.application.unimc.service;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +10,7 @@ import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UniAuth {
+public class UniversityDomainCheckService {
 	
 	
 	public String univerysityNameCheck(String uniEmail) {

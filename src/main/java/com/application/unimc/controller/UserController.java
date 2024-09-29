@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.application.unimc.auth.UniAuth;
 import com.application.unimc.dto.UserDTO;
+import com.application.unimc.service.UniversityDomainCheckService;
 import com.application.unimc.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -22,7 +22,7 @@ public class UserController {
 	private UserService userService;
 	
 	@Autowired
-	private UniAuth uniAuth;
+	private UniversityDomainCheckService universityDomainCheckService;
 	
 	@PostMapping("/signup")
 	public String signup(@ModelAttribute UserDTO userDTO) {
@@ -64,10 +64,11 @@ public class UserController {
 		
 		if(isEmailDuplicate) {
 			emailCheckResult = "Duplicate";
-		}else if(uniAuth.univerysityNameCheck(uniEmail) == null) {
+		}else if(universityDomainCheckService.univerysityNameCheck(uniEmail) == null) {
 			emailCheckResult = "NotFound";
 		}
-		System.out.println("emailCheck");
+		System.out.println("emailCheck : " + uniEmail);
 		return emailCheckResult;
 	}
+	
 }

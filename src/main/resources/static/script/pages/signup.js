@@ -1,7 +1,7 @@
 let isAuthentication = false;
-
 function validateUniversityEmail(email) {
 	const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.ac\.kr$/;
+//	const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 	return pattern.test(email);
 }
 function checkPasswordMatch() {
@@ -78,8 +78,33 @@ $(function() {
 	});
 	
 	
+	function sendVerificationCode(email){
+		$.ajax({
+			type : "GET",
+			url  : "/send-verification-code",
+			data : { uniEmail : email },
+			dataType : "text",
+			success : function(){}
+		});
+	}
 	
-	$("#btn-send").on('click', function(event) {
+	function verifyCode(inputCode){
+		$.ajax({
+			type : "GET",
+			url : "/verify-code",
+			data : { code : inputCode },
+			dataType : "json",
+			success : function(response){
+				if(response){
+					
+				}else{
+					
+				}
+			}
+		});
+	}
+	
+	$("#btn-send").on('click', function() {
 		const emailInput = $('#email');
 		const email = emailInput.val().trim();
 
@@ -89,6 +114,7 @@ $(function() {
 
 			return; // 이메일 형식이 올바르지 않으면 더 이상 진행하지 않고 함수 종료
 		}
+
 		$('#error-message-email').hide();
 
 		$.ajax({
@@ -106,7 +132,8 @@ $(function() {
 					$("#error-message-emailInput").text("대학교를 등록하려면 ? 디스코드 : mubin_c 로 연락주세요 !");
 					emailInput.focus();
 				} else {
-					alert("입력하신 이메일이 인증코드를 전송하였습니다 !");
+					sendVerificationCode(email);
+					alert("인증 코드가 이메일로 전송되었습니다.");
 					$(".input-form-auth").css('display', 'block');
 				}
 			},
@@ -117,46 +144,46 @@ $(function() {
 	});
 	
 	
-	$("#btn-check").on('click', function(event) {
-		event.preventDefault();
+	$("#btn-check").on('click' , function(){
 		$("#code-match-pass").hide();
 		$("#code-match-fail").hide();
-
+		const email = $('#email').val().trim();
 		const inputCode = $("#code").val().trim();
+		
+		$.ajax({
+			type : "GET",
+			url : "/verify-code",
+			data : { code : inputCode , uniEmail : email},
+			dataType : "json",
+			success : function(response){
+				if(response){
+					$("#code-match-pass").text("인증되셨습니다");
+					isAuthentication = true;
+		
+					$("#code-match-pass").css('display', 'block');
+					$("#code-match-fail").css('display', 'none');
+		
+					$("#btn-check").attr('disabled', true);
+					$("#btn-send").attr('disabled', true);
+		
+					$("#email").prop('readonly', true);
+					$("#code").attr("disabled", true);
+				}else{
+					$("#code-match-fail").text("옳지않은 인증코드입니다.");
 
-		let code = "123456";
-
-		if (inputCode == code) {
-			$("#code-match-pass").text("인증되셨습니다");
-			isAuthentication = true;
-
-			$("#code-match-pass").css('display', 'block');
-			$("#code-match-fail").css('display', 'none');
-
-			$("#btn-check").attr('disabled', true);
-			$("#btn-send").attr('disabled', true);
-
-			$("#email").prop('readonly', true);
-			$("#code").attr("disabled", true);
-
-		} else {
-			$("#code-match-fail").text("옳지않은 인증코드입니다.");
-
-			$("#code-match-fail").css('display', 'block');
-			$("#code-match-pass").css('display', 'none');
-
-			$("#btn-check").attr('disabled', false);
-			$("#btn-send").attr('disabled', false);
-
-			$("#email").prop('readonly', false);
-			$("#code").attr("disabled", false);
-		}
-
-	});
-
-
-
-
+					$("#code-match-fail").css('display', 'block');
+					$("#code-match-pass").css('display', 'none');
+		
+					$("#btn-check").attr('disabled', false);
+					$("#btn-send").attr('disabled', false);
+		
+					$("#email").prop('readonly', false);
+					$("#code").attr("disabled", false);
+				}
+			}
+		});
+	})
+	
 	function checkName() {
 		const nameValue = $('#name').val().trim(); // 공백 제거
 		const nameRegex = /^[가-힣]{2,4}$/;
@@ -245,6 +272,7 @@ $(function() {
 			return true;
 		}
 	}
+
 	
 	$("#btn-signup").on('click', function() {
 		if (!checkName()) {
