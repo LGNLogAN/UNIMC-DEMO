@@ -13,7 +13,8 @@
 	    UNIVERSITY, 
 	    MAJOR, 
 	    CAMPUS, 
-	    EVERYTIME
+	    EVERYTIME,
+	    IS_VERIFIED
     )
 	    VALUES 
     (
@@ -24,7 +25,8 @@
 	    #{university}, 
 	    #{major}, 
 	    #{campus}, 
-	    #{everytime}
+	    #{everytime},
+	    #{isVerified}
     )
     
 </insert>
@@ -40,5 +42,11 @@
 	FROM USER
 	WHERE UNI_EMAIL = #{uniEmail}
 </select>
+
+<update id="uniEmailVerified" parameterType="String">
+	UPDATE USER
+	SET is_verified = 'y';
+	WHERE UNI_EMAIL = #{uniEmail}
+</update>
 
 </mapper>

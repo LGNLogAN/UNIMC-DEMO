@@ -22,11 +22,17 @@ public class UserController {
 	private UserService userService;
 	
 	@Autowired
-	private UniversityDomainCheckService universityDomainCheckService;
+	private EmailAuthController emailAuthController;
 	
 	@PostMapping("/signup")
-	public String signup(@ModelAttribute UserDTO userDTO) {
+	public String signup(@ModelAttribute UserDTO userDTO , @RequestParam("code") String code) {
 		System.out.println("UserController : " + userDTO);
+		
+		boolean isVerified = emailAuthController.verifyCode(userDTO.getUniEmail(), code);
+		if(!isVerified) {
+			return "redirect:/register";
+		}
+		userDTO.setIsVerified("y");
 		userService.signup(userDTO);
 		return "redirect:/login";
 	}
@@ -56,19 +62,5 @@ public class UserController {
 		return "redirect:/announce";
 	}
 	
-	@GetMapping("/emailCheck")
-	@ResponseBody
-	public String emailCheck(@RequestParam("uniEmail") String uniEmail) {
-		String emailCheckResult = "pass";
-		boolean isEmailDuplicate = userService.isEmailExists(uniEmail);
-		
-		if(isEmailDuplicate) {
-			emailCheckResult = "Duplicate";
-		}else if(universityDomainCheckService.univerysityNameCheck(uniEmail) == null) {
-			emailCheckResult = "NotFound";
-		}
-		System.out.println("emailCheck : " + uniEmail);
-		return emailCheckResult;
-	}
 	
 }

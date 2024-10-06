@@ -14,5 +14,6 @@ public class UserDTO {
     private String major;      // 학과
     private String campus;     // 캠퍼스 이름 (optional)
     private String everytime;  // 에브리타임 사진 유무 (optional)
-    private Date regDate; 	   // 가입일
+    private String isVerified; // 인증유무
+    private Date   regDate;    // 가입일
 }

@@ -14,20 +14,58 @@ public class UserServiceImpl implements UserService {
 	private UserDAO userDAO;
 	
 	@Autowired
-	private UniversityDomainCheckService universityDomainCheckService;
+	private UniversityDomainCheckService domainCheckService;
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
+	@Autowired
+	private RegexService regexService;
+	
+	
 	@Override
-	public void signup(UserDTO userDTO) {
+	public boolean signUpValidation(UserDTO userDTO) {
+		boolean isValidation = false;
 		
-		userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
-		userDTO.setUniversity(universityDomainCheckService.univerysityNameCheck(userDTO.getUniEmail()));
+		if(!regexService.emailMatchesPattern(userDTO.getUniEmail())) {
+			isValidation = false;
+		}else if(domainCheckService.univerysityNameCheck(userDTO.getUniEmail()) == null){
+			isValidation = false;
+		}else if(isEmailExists(userDTO.getUniEmail())){
+			isValidation = false;
+		}else if(!regexService.nameMatchesPattern(userDTO.getName())) {
+			isValidation = false;
+		}else if(!regexService.mcNameMatchesPattern(userDTO.getMcName())) {
+			isValidation = false;
+		}else if(userDTO.getMajor() == null){
+			isValidation = false;
+		}else if(userDTO.getCampus() == null){
+			isValidation = false;
+		}else if(!userDTO.getIsVerified().equals("y")){
+			isValidation = false;
+		}else {
+			isValidation = true;
+		}
 		
-		userDAO.signup(userDTO);
+		return isValidation;
+
+	}
+	
+	@Override
+	public String signup(UserDTO userDTO) {
 		
-		System.out.println("UserServiceImpl : " + userDTO);
+		if (signUpValidation(userDTO)) {
+			userDTO.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+			userDTO.setUniversity(domainCheckService.univerysityNameCheck(userDTO.getUniEmail()));
+			
+			userDAO.signup(userDTO);
+			System.out.println("UserServiceImpl : " + userDTO + "\nResult : SignUp Success");
+			return "SignUp Success";
+		}else {
+			System.out.println("UserServiceImpl : " + userDTO + "\nResult : SignUp Fail");
+			return "SignUp Fail";
+		}
+		
 	}
 
 	@Override
@@ -57,12 +95,6 @@ public class UserServiceImpl implements UserService {
 			isEmailExists = false;
 		}
 		return isEmailExists;
-	}
-			
-			
-			
-			
-			
-			
+	}		
 			
 }

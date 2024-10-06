@@ -167,7 +167,7 @@ $(function() {
 					$("#btn-send").attr('disabled', true);
 		
 					$("#email").prop('readonly', true);
-					$("#code").attr("disabled", true);
+					$("#code").prop('readonly', true);
 				}else{
 					$("#code-match-fail").text("옳지않은 인증코드입니다.");
 
@@ -178,7 +178,7 @@ $(function() {
 					$("#btn-send").attr('disabled', false);
 		
 					$("#email").prop('readonly', false);
-					$("#code").attr("disabled", false);
+					$("#code").prop('readonly', false);
 				}
 			}
 		});

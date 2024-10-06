@@ -1,19 +1,18 @@
 package com.application.unimc.controller;
 
-import org.hamcrest.text.MatchesPattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.application.unimc.service.EmailSenderService;
 import com.application.unimc.service.RedisService;
+import com.application.unimc.service.RegexService;
 import com.application.unimc.service.UniversityDomainCheckService;
 import com.application.unimc.service.UserService;
 
 import java.util.Random;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @RestController
 public class EmailAuthController {
@@ -30,12 +29,8 @@ public class EmailAuthController {
     @Autowired
     private UserService userService;
     
-    // 이메일 정규식 판별식
-    private boolean matchesPattern(String input, String regex) {
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(input);
-        return matcher.matches();
-    }
+    @Autowired
+    private RegexService regexService;
     
     // 6자리 랜덤 코드 생성 메서드
     private String generateVerificationCode() {
@@ -46,9 +41,8 @@ public class EmailAuthController {
 
     @GetMapping("/send-verification-code")
     public String sendVerificationCode(@RequestParam("uniEmail") String uniEmail) {
-    	String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.ac\\.kr$";
     	
-		if(!matchesPattern(uniEmail , emailRegex)) {
+		if(!regexService.emailMatchesPattern(uniEmail)) {
 			return "[ Error ] : 400 Bad Request\n[ Comment ] : 지원하지않은 이메일입니다.";
     	}else if(domainCheckService.univerysityNameCheck(uniEmail) == null) {
     		return "[ Error ] : 404 Not Found\n[ Comment ] : 해당 대학교 이메일은 지원하지않습니다.\n[ Inquiry ] : 디스코드(mubin_c)";
@@ -85,4 +79,20 @@ public class EmailAuthController {
             return false;
         }
     }
+    
+    
+    @GetMapping("/emailCheck")
+	@ResponseBody
+	public String emailCheck(@RequestParam("uniEmail") String uniEmail) {
+		String emailCheckResult = "pass";
+		boolean isEmailDuplicate = userService.isEmailExists(uniEmail);
+		
+		if(isEmailDuplicate) {
+			emailCheckResult = "Duplicate";
+		}else if(domainCheckService.univerysityNameCheck(uniEmail) == null) {
+			emailCheckResult = "NotFound";
+		}
+		System.out.println("emailCheck : " + uniEmail);
+		return emailCheckResult;
+	}
 }

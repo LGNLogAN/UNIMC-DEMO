@@ -7,11 +7,10 @@ import java.io.Reader;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class UniversityDomainCheckService {
-	
 	
 	public String univerysityNameCheck(String uniEmail) {
 		String university = "";

@@ -3,6 +3,9 @@ package com.application.unimc;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -10,8 +13,11 @@ import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.application.unimc.dao.UserDAO;
+import com.application.unimc.service.OcrService;
 import com.application.unimc.service.UniversityDomainCheckService;
 import com.application.unimc.service.UserService;
 
@@ -63,5 +69,32 @@ class UnimcApplicationTests {
 		
 		System.out.println(emailCheckResult);
 	}
+	
+	 @Autowired
+    private OcrService ocrService;
+
+    @Test
+    public void testOcrTextExtract() throws Exception {
+        // 이미지 경로에서 파일 읽기
+        Path path = Paths.get("src/main/resources/static/img/everytime/myung.jpg");  // 테스트 이미지 경로
+        byte[] fileContent = Files.readAllBytes(path);
+
+        // MockMultipartFile 객체 생성
+        MockMultipartFile mockMultipartFile = new MockMultipartFile(
+                "file",                                // 파일 이름
+                "test-image.jpg",                      // 오리지널 파일 이름
+                "image/jpeg",                          // 파일 타입 (MIME 타입)
+                fileContent                            // 파일 데이터
+        );
+        
+        // MultipartFile 타입으로 변환
+        MultipartFile multipartFile = mockMultipartFile;
+
+        // ocrTextExtract에 전달
+        String result = ocrService.ocrTextExtract(multipartFile);
+
+        // 결과 값 검증
+        System.out.println(result);  // 결과 출력
+    }
 
 }
