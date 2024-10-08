@@ -6,7 +6,11 @@ import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -26,7 +30,7 @@ import com.application.unimc.service.UserService;
 class UnimcApplicationTests {
 	
 	@Test
-	void univerysityNameCheck(){
+	void testUniverysityNameCheck(){
 		JSONParser parser = new JSONParser();
 		Reader reader = null;
 		String korea_email = "logan061175@kore.ac.kr"; // 잘못된 이메일 형식
@@ -48,14 +52,13 @@ class UnimcApplicationTests {
 		
 	}
 	
-	
 	@Autowired
 	private UserService userService;
 	@Autowired
 	private UniversityDomainCheckService universityDomainCheckService;
 	
 	@Test
-	void isEmailDuplicate() {
+	void testIsEmailDuplicate() {
 //		String uniEmail = "logan061175@sju.ac.kr";
 		String uniEmail = "logan061175@kore.ac.kr";
 		String emailCheckResult = "pass";
@@ -72,9 +75,10 @@ class UnimcApplicationTests {
 	
 	 @Autowired
     private OcrService ocrService;
-
+	
     @Test
     public void testOcrTextExtract() throws Exception {
+    	
         // 이미지 경로에서 파일 읽기
         Path path = Paths.get("src/main/resources/static/img/everytime/myung.jpg");  // 테스트 이미지 경로
         byte[] fileContent = Files.readAllBytes(path);
@@ -91,10 +95,61 @@ class UnimcApplicationTests {
         MultipartFile multipartFile = mockMultipartFile;
 
         // ocrTextExtract에 전달
-        String result = ocrService.ocrTextExtract(multipartFile);
+        String result = ocrService.extractTextToImage(multipartFile);
 
         // 결과 값 검증
         System.out.println(result);  // 결과 출력
+    }
+    
+    
+    @Test
+    public void testEverytimeJsonParse() throws Exception {
+    	// 이미지 경로에서 파일 읽기
+        Path path = Paths.get("src/main/resources/static/img/everytime/myung.jpg");  // 테스트 이미지 경로
+        byte[] fileContent = Files.readAllBytes(path);
+
+        // MockMultipartFile 객체 생성
+        MockMultipartFile mockMultipartFile = new MockMultipartFile(
+                "file",                                // 파일 이름
+                "test-image.jpg",                      // 오리지널 파일 이름
+                "image/jpeg",                          // 파일 타입 (MIME 타입)
+                fileContent                            // 파일 데이터
+        );
+        
+        // MultipartFile 타입으로 변환
+        MultipartFile multipartFile = mockMultipartFile;
+
+        // ocrTextExtract에 전달
+        String jsonString = ocrService.extractTextToImage(multipartFile);
+        List<Object> list = new ArrayList<>();
+        // java.lang.NullPointerException: Cannot invoke "org.json.simple.JSONArray.iterator()" because "fields" is null 
+        try {
+            JSONParser parser = new JSONParser();
+            JSONObject jsonObject = (JSONObject) parser.parse(jsonString);
+            
+            // images 배열에 첫 번째 이미지의 값을 firstImage에 저장
+            JSONArray images = (JSONArray) jsonObject.get("images");
+            JSONObject firstImage = (JSONObject) images.get(0);
+            
+            JSONArray fields = (JSONArray) firstImage.get("field");
+            
+            for(Object fieldObj : fields) {
+                JSONObject field = (JSONObject) fieldObj;
+                
+                String inferText = (String) field.get("inferText");
+                double inferConfidence = (double) field.get("inferConfidence");
+                
+                list.add(inferText);
+                list.add(inferConfidence);
+            }
+            
+            for (int i = 0; i < list.size(); i++) {
+                System.out.println(list.get(i));
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
