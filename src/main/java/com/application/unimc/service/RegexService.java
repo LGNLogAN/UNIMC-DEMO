@@ -41,4 +41,22 @@ public class RegexService {
 		
 		return matcher.matches();
 	}
+	
+	// 학과/전공/학부 판별 정규식
+	public boolean majorMatchesPattern(String major) {
+		String majorRegex = "^[가-힣a-zA-Z]+(과|전공|학부)$";
+		return major.matches(majorRegex);
+	}
+	
+	// 캠퍼스 여부 판별
+	public boolean campusMatchesPattern(String campus) {
+		String campusRegex = "^[가-힣]+캠$";
+		return campus.matches(campusRegex);
+	}
+	
+	// 재학생 판별
+	public boolean containsStudentKeyword(String input) {
+	    return input.contains("재학생");
+	}
+
 }

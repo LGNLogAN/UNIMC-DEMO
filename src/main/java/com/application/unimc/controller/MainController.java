@@ -52,5 +52,9 @@ public class MainController {
 	public String simpleSignup() {
 		return "pages/register/simplesignup";
 	}
+	@GetMapping("/schedule")
+	public String scehdule() {
+		return "pages/schedule.html";
+	}
 	
 }

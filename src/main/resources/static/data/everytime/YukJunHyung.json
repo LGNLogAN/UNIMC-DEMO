@@ -1,0 +1,918 @@
+{
+	"version": "V1",
+	"requestId": "logan",
+	"timestamp": 1728396325378,
+	"images": [
+		{
+			"uid": "8e3b27bcd5364d1a9cac587c6cef1998",
+			"name": "image",
+			"inferResult": "SUCCESS",
+			"message": "SUCCESS",
+			"validationResult": {
+				"result": "NO_REQUESTED"
+			},
+			"fields": [
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 36.0,
+								"y": 15.0
+							},
+							{
+								"x": 68.0,
+								"y": 15.0
+							},
+							{
+								"x": 68.0,
+								"y": 27.0
+							},
+							{
+								"x": 36.0,
+								"y": 27.0
+							}
+						]
+					},
+					"inferText": "4:09",
+					"inferConfidence": 0.9997
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 254.0,
+								"y": 16.0
+							},
+							{
+								"x": 270.0,
+								"y": 16.0
+							},
+							{
+								"x": 270.0,
+								"y": 26.0
+							},
+							{
+								"x": 254.0,
+								"y": 26.0
+							}
+						]
+					},
+					"inferText": "5G",
+					"inferConfidence": 0.9992
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 278.0,
+								"y": 17.0
+							},
+							{
+								"x": 295.0,
+								"y": 17.0
+							},
+							{
+								"x": 295.0,
+								"y": 25.0
+							},
+							{
+								"x": 278.0,
+								"y": 25.0
+							}
+						]
+					},
+					"inferText": "50",
+					"inferConfidence": 0.9984
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 138.0,
+								"y": 48.0
+							},
+							{
+								"x": 181.0,
+								"y": 48.0
+							},
+							{
+								"x": 181.0,
+								"y": 65.0
+							},
+							{
+								"x": 138.0,
+								"y": 65.0
+							}
+						]
+					},
+					"inferText": "내 정보",
+					"inferConfidence": 0.9737
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 18.0,
+								"y": 90.0
+							},
+							{
+								"x": 81.0,
+								"y": 90.0
+							},
+							{
+								"x": 81.0,
+								"y": 109.0
+							},
+							{
+								"x": 18.0,
+								"y": 109.0
+							}
+						]
+					},
+					"inferText": "내 프로필",
+					"inferConfidence": 0.9999
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 84.0,
+								"y": 221.0
+							},
+							{
+								"x": 130.0,
+								"y": 221.0
+							},
+							{
+								"x": 130.0,
+								"y": 240.0
+							},
+							{
+								"x": 84.0,
+								"y": 240.0
+							}
+						]
+					},
+					"inferText": "육준형",
+					"inferConfidence": 0.9998
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 265.0,
+								"y": 222.0
+							},
+							{
+								"x": 321.0,
+								"y": 222.0
+							},
+							{
+								"x": 321.0,
+								"y": 239.0
+							},
+							{
+								"x": 265.0,
+								"y": 239.0
+							}
+						]
+					},
+					"inferText": "육준형c",
+					"inferConfidence": 0.9491
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 91.0,
+								"y": 247.0
+							},
+							{
+								"x": 126.0,
+								"y": 247.0
+							},
+							{
+								"x": 126.0,
+								"y": 262.0
+							},
+							{
+								"x": 91.0,
+								"y": 262.0
+							}
+						]
+					},
+					"inferText": "대진대",
+					"inferConfidence": 0.9999
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 79.0,
+								"y": 265.0
+							},
+							{
+								"x": 137.0,
+								"y": 265.0
+							},
+							{
+								"x": 137.0,
+								"y": 280.0
+							},
+							{
+								"x": 79.0,
+								"y": 280.0
+							}
+						]
+					},
+					"inferText": "AI융합학부",
+					"inferConfidence": 0.9997
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 69.0,
+								"y": 282.0
+							},
+							{
+								"x": 147.0,
+								"y": 282.0
+							},
+							{
+								"x": 147.0,
+								"y": 298.0
+							},
+							{
+								"x": 69.0,
+								"y": 298.0
+							}
+						]
+					},
+					"inferText": "컴퓨터공학전공",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 67.0,
+								"y": 301.0
+							},
+							{
+								"x": 148.0,
+								"y": 301.0
+							},
+							{
+								"x": 148.0,
+								"y": 316.0
+							},
+							{
+								"x": 67.0,
+								"y": 316.0
+							}
+						]
+					},
+					"inferText": "24학번 · 재학생",
+					"inferConfidence": 0.9487
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 51.0,
+								"y": 360.0
+							},
+							{
+								"x": 74.0,
+								"y": 360.0
+							},
+							{
+								"x": 74.0,
+								"y": 375.0
+							},
+							{
+								"x": 51.0,
+								"y": 375.0
+							}
+						]
+					},
+					"inferText": "실명",
+					"inferConfidence": 0.9995
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 171.0,
+								"y": 362.0
+							},
+							{
+								"x": 181.0,
+								"y": 362.0
+							},
+							{
+								"x": 181.0,
+								"y": 373.0
+							},
+							{
+								"x": 171.0,
+								"y": 373.0
+							}
+						]
+					},
+					"inferText": ">",
+					"inferConfidence": 0.9887
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 238.0,
+								"y": 360.0
+							},
+							{
+								"x": 273.0,
+								"y": 360.0
+							},
+							{
+								"x": 273.0,
+								"y": 375.0
+							},
+							{
+								"x": 238.0,
+								"y": 375.0
+							}
+						]
+					},
+					"inferText": "게시판",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 17.0,
+								"y": 418.0
+							},
+							{
+								"x": 62.0,
+								"y": 418.0
+							},
+							{
+								"x": 62.0,
+								"y": 436.0
+							},
+							{
+								"x": 17.0,
+								"y": 436.0
+							}
+						]
+					},
+					"inferText": "프로필",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 63.0,
+								"y": 416.0
+							},
+							{
+								"x": 123.0,
+								"y": 416.0
+							},
+							{
+								"x": 123.0,
+								"y": 437.0
+							},
+							{
+								"x": 63.0,
+								"y": 437.0
+							}
+						]
+					},
+					"inferText": "완성하기",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 280.0,
+								"y": 421.0
+							},
+							{
+								"x": 299.0,
+								"y": 421.0
+							},
+							{
+								"x": 299.0,
+								"y": 431.0
+							},
+							{
+								"x": 280.0,
+								"y": 431.0
+							}
+						]
+					},
+					"inferText": "3/5",
+					"inferConfidence": 0.9911
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 31.0,
+								"y": 484.0
+							},
+							{
+								"x": 54.0,
+								"y": 484.0
+							},
+							{
+								"x": 54.0,
+								"y": 500.0
+							},
+							{
+								"x": 31.0,
+								"y": 500.0
+							}
+						]
+					},
+					"inferText": "실명",
+					"inferConfidence": 0.9998
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 56.0,
+								"y": 485.0
+							},
+							{
+								"x": 90.0,
+								"y": 485.0
+							},
+							{
+								"x": 90.0,
+								"y": 499.0
+							},
+							{
+								"x": 56.0,
+								"y": 499.0
+							}
+						]
+					},
+					"inferText": "프로필",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 90.0,
+								"y": 485.0
+							},
+							{
+								"x": 114.0,
+								"y": 485.0
+							},
+							{
+								"x": 114.0,
+								"y": 500.0
+							},
+							{
+								"x": 90.0,
+								"y": 500.0
+							}
+						]
+					},
+					"inferText": "사진",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 114.0,
+								"y": 484.0
+							},
+							{
+								"x": 139.0,
+								"y": 484.0
+							},
+							{
+								"x": 139.0,
+								"y": 500.0
+							},
+							{
+								"x": 114.0,
+								"y": 500.0
+							}
+						]
+					},
+					"inferText": "추가",
+					"inferConfidence": 0.9976
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 280.0,
+								"y": 485.0
+							},
+							{
+								"x": 316.0,
+								"y": 485.0
+							},
+							{
+								"x": 316.0,
+								"y": 500.0
+							},
+							{
+								"x": 280.0,
+								"y": 500.0
+							}
+						]
+					},
+					"inferText": "게시판",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 31.0,
+								"y": 505.0
+							},
+							{
+								"x": 51.0,
+								"y": 505.0
+							},
+							{
+								"x": 51.0,
+								"y": 517.0
+							},
+							{
+								"x": 31.0,
+								"y": 517.0
+							}
+						]
+					},
+					"inferText": "실명",
+					"inferConfidence": 0.9997
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 53.0,
+								"y": 506.0
+							},
+							{
+								"x": 101.0,
+								"y": 506.0
+							},
+							{
+								"x": 101.0,
+								"y": 517.0
+							},
+							{
+								"x": 53.0,
+								"y": 517.0
+							}
+						]
+					},
+					"inferText": "채팅방에서",
+					"inferConfidence": 0.9998
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 101.0,
+								"y": 506.0
+							},
+							{
+								"x": 122.0,
+								"y": 506.0
+							},
+							{
+								"x": 122.0,
+								"y": 517.0
+							},
+							{
+								"x": 101.0,
+								"y": 517.0
+							}
+						]
+					},
+					"inferText": "나를",
+					"inferConfidence": 0.9985
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 123.0,
+								"y": 506.0
+							},
+							{
+								"x": 153.0,
+								"y": 506.0
+							},
+							{
+								"x": 153.0,
+								"y": 517.0
+							},
+							{
+								"x": 123.0,
+								"y": 517.0
+							}
+						]
+					},
+					"inferText": "대표할",
+					"inferConfidence": 0.9997
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 153.0,
+								"y": 506.0
+							},
+							{
+								"x": 165.0,
+								"y": 506.0
+							},
+							{
+								"x": 165.0,
+								"y": 517.0
+							},
+							{
+								"x": 153.0,
+								"y": 517.0
+							}
+						]
+					},
+					"inferText": "수",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 166.0,
+								"y": 506.0
+							},
+							{
+								"x": 186.0,
+								"y": 506.0
+							},
+							{
+								"x": 186.0,
+								"y": 517.0
+							},
+							{
+								"x": 166.0,
+								"y": 517.0
+							}
+						]
+					},
+					"inferText": "있는",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 280.0,
+								"y": 505.0
+							},
+							{
+								"x": 320.0,
+								"y": 505.0
+							},
+							{
+								"x": 320.0,
+								"y": 517.0
+							},
+							{
+								"x": 280.0,
+								"y": 517.0
+							}
+						]
+					},
+					"inferText": "닉네임으",
+					"inferConfidence": 0.9809
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 31.0,
+								"y": 520.0
+							},
+							{
+								"x": 61.0,
+								"y": 520.0
+							},
+							{
+								"x": 61.0,
+								"y": 532.0
+							},
+							{
+								"x": 31.0,
+								"y": 532.0
+							}
+						]
+					},
+					"inferText": "사진을",
+					"inferConfidence": 0.9996
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 62.0,
+								"y": 520.0
+							},
+							{
+								"x": 123.0,
+								"y": 520.0
+							},
+							{
+								"x": 123.0,
+								"y": 532.0
+							},
+							{
+								"x": 62.0,
+								"y": 532.0
+							}
+						]
+					},
+					"inferText": "등록해보세요.",
+					"inferConfidence": 0.9953
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 281.0,
+								"y": 520.0
+							},
+							{
+								"x": 310.0,
+								"y": 520.0
+							},
+							{
+								"x": 310.0,
+								"y": 532.0
+							},
+							{
+								"x": 281.0,
+								"y": 532.0
+							}
+						]
+					},
+					"inferText": "표현할",
+					"inferConfidence": 0.9739
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 311.0,
+								"y": 520.0
+							},
+							{
+								"x": 321.0,
+								"y": 520.0
+							},
+							{
+								"x": 321.0,
+								"y": 532.0
+							},
+							{
+								"x": 311.0,
+								"y": 532.0
+							}
+						]
+					},
+					"inferText": "수",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 17.0,
+								"y": 611.0
+							},
+							{
+								"x": 48.0,
+								"y": 611.0
+							},
+							{
+								"x": 48.0,
+								"y": 630.0
+							},
+							{
+								"x": 17.0,
+								"y": 630.0
+							}
+						]
+					},
+					"inferText": "계정",
+					"inferConfidence": 0.9997
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 17.0,
+								"y": 653.0
+							},
+							{
+								"x": 56.0,
+								"y": 653.0
+							},
+							{
+								"x": 56.0,
+								"y": 670.0
+							},
+							{
+								"x": 17.0,
+								"y": 670.0
+							}
+						]
+					},
+					"inferText": "아이디",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 252.0,
+								"y": 656.0
+							},
+							{
+								"x": 299.0,
+								"y": 656.0
+							},
+							{
+								"x": 299.0,
+								"y": 666.0
+							},
+							{
+								"x": 252.0,
+								"y": 666.0
+							}
+						]
+					},
+					"inferText": "dbr0106",
+					"inferConfidence": 0.9948
+				}
+			]
+		}
+	]
+}

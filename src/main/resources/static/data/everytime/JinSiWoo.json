@@ -1,0 +1,618 @@
+{
+	"version": "V1",
+	"requestId": "logan",
+	"timestamp": 1728396228303,
+	"images": [
+		{
+			"uid": "45aaf649ca894bd097c7137eab97244b",
+			"name": "image",
+			"inferResult": "SUCCESS",
+			"message": "SUCCESS",
+			"validationResult": {
+				"result": "NO_REQUESTED"
+			},
+			"fields": [
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 19.0,
+								"y": 9.0
+							},
+							{
+								"x": 36.0,
+								"y": 9.0
+							},
+							{
+								"x": 36.0,
+								"y": 20.0
+							},
+							{
+								"x": 19.0,
+								"y": 20.0
+							}
+						]
+					},
+					"inferText": "KT",
+					"inferConfidence": 0.9999
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 37.0,
+								"y": 10.0
+							},
+							{
+								"x": 68.0,
+								"y": 10.0
+							},
+							{
+								"x": 68.0,
+								"y": 19.0
+							},
+							{
+								"x": 37.0,
+								"y": 19.0
+							}
+						]
+					},
+					"inferText": "12:58",
+					"inferConfidence": 0.9998
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 72.0,
+								"y": 11.0
+							},
+							{
+								"x": 96.0,
+								"y": 11.0
+							},
+							{
+								"x": 96.0,
+								"y": 19.0
+							},
+							{
+								"x": 72.0,
+								"y": 19.0
+							}
+						]
+					},
+					"inferText": "BMW",
+					"inferConfidence": 0.5051
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 272.0,
+								"y": 10.0
+							},
+							{
+								"x": 292.0,
+								"y": 10.0
+							},
+							{
+								"x": 292.0,
+								"y": 20.0
+							},
+							{
+								"x": 272.0,
+								"y": 20.0
+							}
+						]
+					},
+					"inferText": "8%",
+					"inferConfidence": 0.9963
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 62.0,
+								"y": 41.0
+							},
+							{
+								"x": 110.0,
+								"y": 41.0
+							},
+							{
+								"x": 110.0,
+								"y": 59.0
+							},
+							{
+								"x": 62.0,
+								"y": 59.0
+							}
+						]
+					},
+					"inferText": "내 정보",
+					"inferConfidence": 0.9756
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 20.0,
+								"y": 92.0
+							},
+							{
+								"x": 81.0,
+								"y": 92.0
+							},
+							{
+								"x": 81.0,
+								"y": 110.0
+							},
+							{
+								"x": 20.0,
+								"y": 110.0
+							}
+						]
+					},
+					"inferText": "내 프로필",
+					"inferConfidence": 0.9982
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 95.0,
+								"y": 233.0
+							},
+							{
+								"x": 139.0,
+								"y": 233.0
+							},
+							{
+								"x": 139.0,
+								"y": 251.0
+							},
+							{
+								"x": 95.0,
+								"y": 251.0
+							}
+						]
+					},
+					"inferText": "진시우",
+					"inferConfidence": 0.9995
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 299.0,
+								"y": 235.0
+							},
+							{
+								"x": 321.0,
+								"y": 235.0
+							},
+							{
+								"x": 321.0,
+								"y": 249.0
+							},
+							{
+								"x": 299.0,
+								"y": 249.0
+							}
+						]
+					},
+					"inferText": "수",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 82.0,
+								"y": 259.0
+							},
+							{
+								"x": 117.0,
+								"y": 259.0
+							},
+							{
+								"x": 117.0,
+								"y": 273.0
+							},
+							{
+								"x": 82.0,
+								"y": 273.0
+							}
+						]
+					},
+					"inferText": "단국대",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 117.0,
+								"y": 259.0
+							},
+							{
+								"x": 152.0,
+								"y": 259.0
+							},
+							{
+								"x": 152.0,
+								"y": 273.0
+							},
+							{
+								"x": 117.0,
+								"y": 273.0
+							}
+						]
+					},
+					"inferText": "죽전캠",
+					"inferConfidence": 0.997
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 95.0,
+								"y": 280.0
+							},
+							{
+								"x": 140.0,
+								"y": 280.0
+							},
+							{
+								"x": 140.0,
+								"y": 295.0
+							},
+							{
+								"x": 95.0,
+								"y": 295.0
+							}
+						]
+					},
+					"inferText": "경영학부",
+					"inferConfidence": 0.9999
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 78.0,
+								"y": 303.0
+							},
+							{
+								"x": 156.0,
+								"y": 303.0
+							},
+							{
+								"x": 156.0,
+								"y": 316.0
+							},
+							{
+								"x": 78.0,
+								"y": 316.0
+							}
+						]
+					},
+					"inferText": "24학번·재학생",
+					"inferConfidence": 0.9868
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 52.0,
+								"y": 370.0
+							},
+							{
+								"x": 74.0,
+								"y": 370.0
+							},
+							{
+								"x": 74.0,
+								"y": 383.0
+							},
+							{
+								"x": 52.0,
+								"y": 383.0
+							}
+						]
+					},
+					"inferText": "실명",
+					"inferConfidence": 0.9999
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 190.0,
+								"y": 369.0
+							},
+							{
+								"x": 200.0,
+								"y": 369.0
+							},
+							{
+								"x": 200.0,
+								"y": 382.0
+							},
+							{
+								"x": 190.0,
+								"y": 382.0
+							}
+						]
+					},
+					"inferText": ">",
+					"inferConfidence": 0.9988
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 254.0,
+								"y": 370.0
+							},
+							{
+								"x": 289.0,
+								"y": 370.0
+							},
+							{
+								"x": 289.0,
+								"y": 384.0
+							},
+							{
+								"x": 254.0,
+								"y": 384.0
+							}
+						]
+					},
+					"inferText": "게시판",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 19.0,
+								"y": 432.0
+							},
+							{
+								"x": 50.0,
+								"y": 432.0
+							},
+							{
+								"x": 50.0,
+								"y": 450.0
+							},
+							{
+								"x": 19.0,
+								"y": 450.0
+							}
+						]
+					},
+					"inferText": "계정",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 20.0,
+								"y": 476.0
+							},
+							{
+								"x": 58.0,
+								"y": 476.0
+							},
+							{
+								"x": 58.0,
+								"y": 492.0
+							},
+							{
+								"x": 20.0,
+								"y": 492.0
+							}
+						]
+					},
+					"inferText": "아이디",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 223.0,
+								"y": 478.0
+							},
+							{
+								"x": 298.0,
+								"y": 478.0
+							},
+							{
+								"x": 298.0,
+								"y": 487.0
+							},
+							{
+								"x": 223.0,
+								"y": 487.0
+							}
+						]
+					},
+					"inferText": "iinsiwoo1234",
+					"inferConfidence": 0.9826
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 20.0,
+								"y": 518.0
+							},
+							{
+								"x": 71.0,
+								"y": 518.0
+							},
+							{
+								"x": 71.0,
+								"y": 534.0
+							},
+							{
+								"x": 20.0,
+								"y": 534.0
+							}
+						]
+					},
+					"inferText": "비밀번호",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 71.0,
+								"y": 518.0
+							},
+							{
+								"x": 98.0,
+								"y": 518.0
+							},
+							{
+								"x": 98.0,
+								"y": 534.0
+							},
+							{
+								"x": 71.0,
+								"y": 534.0
+							}
+						]
+					},
+					"inferText": "변경",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 20.0,
+								"y": 559.0
+							},
+							{
+								"x": 87.0,
+								"y": 559.0
+							},
+							{
+								"x": 87.0,
+								"y": 576.0
+							},
+							{
+								"x": 20.0,
+								"y": 576.0
+							}
+						]
+					},
+					"inferText": "이메일변경",
+					"inferConfidence": 0.943
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 20.0,
+								"y": 625.0
+							},
+							{
+								"x": 77.0,
+								"y": 625.0
+							},
+							{
+								"x": 77.0,
+								"y": 643.0
+							},
+							{
+								"x": 20.0,
+								"y": 643.0
+							}
+						]
+					},
+					"inferText": "커뮤니티",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 152.0,
+								"y": 664.0
+							},
+							{
+								"x": 169.0,
+								"y": 664.0
+							},
+							{
+								"x": 169.0,
+								"y": 681.0
+							},
+							{
+								"x": 152.0,
+								"y": 681.0
+							}
+						]
+					},
+					"inferText": "0",
+					"inferConfidence": 0.5771
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 247.0,
+								"y": 667.0
+							},
+							{
+								"x": 255.0,
+								"y": 667.0
+							},
+							{
+								"x": 255.0,
+								"y": 679.0
+							},
+							{
+								"x": 247.0,
+								"y": 679.0
+							}
+						]
+					},
+					"inferText": "<",
+					"inferConfidence": 0.9966
+				}
+			]
+		}
+	]
+}

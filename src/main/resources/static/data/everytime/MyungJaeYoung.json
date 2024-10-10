@@ -1,16 +1,18 @@
 {
+	"version": "V1",
+	"requestId": "logan",
+	"timestamp": 1728396363481,
 	"images": [
 		{
-			"uid": "1f1d3b56d967411d94ff9de1b9d4797e",
+			"uid": "4b8b4130c44d4873a67c3a9d44aa17f4",
+			"name": "image",
+			"inferResult": "SUCCESS",
+			"message": "SUCCESS",
 			"validationResult": {
 				"result": "NO_REQUESTED"
 			},
-			"inferResult": "SUCCESS",
-			"name": "image",
-			"message": "SUCCESS",
 			"fields": [
 				{
-					"inferConfidence": 0.9982,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -32,10 +34,10 @@
 							}
 						]
 					},
-					"inferText": "4:59"
+					"inferText": "4:59",
+					"inferConfidence": 0.9982
 				},
 				{
-					"inferConfidence": 0.9997,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -57,10 +59,10 @@
 							}
 						]
 					},
-					"inferText": "LTE"
+					"inferText": "LTE",
+					"inferConfidence": 0.9997
 				},
 				{
-					"inferConfidence": 0.9495,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -82,10 +84,10 @@
 							}
 						]
 					},
-					"inferText": "내 정보"
+					"inferText": "내 정보",
+					"inferConfidence": 0.9495
 				},
 				{
-					"inferConfidence": 0.9822,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -107,10 +109,10 @@
 							}
 						]
 					},
-					"inferText": "내 프로필"
+					"inferText": "내 프로필",
+					"inferConfidence": 0.9822
 				},
 				{
-					"inferConfidence": 0.9998,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -132,10 +134,10 @@
 							}
 						]
 					},
-					"inferText": "명재영"
+					"inferText": "명재영",
+					"inferConfidence": 0.9998
 				},
 				{
-					"inferConfidence": 0.9975,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -157,10 +159,10 @@
 							}
 						]
 					},
-					"inferText": "jjjjjjy"
+					"inferText": "jjjjjjy",
+					"inferConfidence": 0.9975
 				},
 				{
-					"inferConfidence": 0.9998,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -182,10 +184,10 @@
 							}
 						]
 					},
-					"inferText": "대진대"
+					"inferText": "대진대",
+					"inferConfidence": 0.9998
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -207,10 +209,10 @@
 							}
 						]
 					},
-					"inferText": "간호학과"
+					"inferText": "간호학과",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 0.9988,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -232,10 +234,10 @@
 							}
 						]
 					},
-					"inferText": "24학번"
+					"inferText": "24학번",
+					"inferConfidence": 0.9988
 				},
 				{
-					"inferConfidence": 0.9998,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -257,10 +259,10 @@
 							}
 						]
 					},
-					"inferText": "재학생"
+					"inferText": "재학생",
+					"inferConfidence": 0.9998
 				},
 				{
-					"inferConfidence": 0.5804,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -282,10 +284,10 @@
 							}
 						]
 					},
-					"inferText": "B"
+					"inferText": "B",
+					"inferConfidence": 0.5804
 				},
 				{
-					"inferConfidence": 0.9997,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -307,10 +309,10 @@
 							}
 						]
 					},
-					"inferText": "실명"
+					"inferText": "실명",
+					"inferConfidence": 0.9997
 				},
 				{
-					"inferConfidence": 0.9446,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -332,10 +334,10 @@
 							}
 						]
 					},
-					"inferText": ">"
+					"inferText": ">",
+					"inferConfidence": 0.9446
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -357,10 +359,10 @@
 							}
 						]
 					},
-					"inferText": "게시판"
+					"inferText": "게시판",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -382,10 +384,10 @@
 							}
 						]
 					},
-					"inferText": "프로필"
+					"inferText": "프로필",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -407,10 +409,10 @@
 							}
 						]
 					},
-					"inferText": "완성하기"
+					"inferText": "완성하기",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 0.9851,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -432,10 +434,10 @@
 							}
 						]
 					},
-					"inferText": "3\/5"
+					"inferText": "3/5",
+					"inferConfidence": 0.9851
 				},
 				{
-					"inferConfidence": 0.999,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -457,10 +459,10 @@
 							}
 						]
 					},
-					"inferText": "실명"
+					"inferText": "실명",
+					"inferConfidence": 0.999
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -482,10 +484,10 @@
 							}
 						]
 					},
-					"inferText": "프로필"
+					"inferText": "프로필",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 0.9998,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -507,10 +509,10 @@
 							}
 						]
 					},
-					"inferText": "사진"
+					"inferText": "사진",
+					"inferConfidence": 0.9998
 				},
 				{
-					"inferConfidence": 0.9995,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -532,10 +534,10 @@
 							}
 						]
 					},
-					"inferText": "추가"
+					"inferText": "추가",
+					"inferConfidence": 0.9995
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -557,10 +559,10 @@
 							}
 						]
 					},
-					"inferText": "게시판"
+					"inferText": "게시판",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 0.9999,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -582,10 +584,10 @@
 							}
 						]
 					},
-					"inferText": "프로"
+					"inferText": "프로",
+					"inferConfidence": 0.9999
 				},
 				{
-					"inferConfidence": 0.9997,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -607,10 +609,10 @@
 							}
 						]
 					},
-					"inferText": "실명"
+					"inferText": "실명",
+					"inferConfidence": 0.9997
 				},
 				{
-					"inferConfidence": 0.9415,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -632,10 +634,10 @@
 							}
 						]
 					},
-					"inferText": "채팅방에서나를"
+					"inferText": "채팅방에서나를",
+					"inferConfidence": 0.9415
 				},
 				{
-					"inferConfidence": 0.9893,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -657,10 +659,10 @@
 							}
 						]
 					},
-					"inferText": "대표할"
+					"inferText": "대표할",
+					"inferConfidence": 0.9893
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -682,10 +684,10 @@
 							}
 						]
 					},
-					"inferText": "수"
+					"inferText": "수",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -707,10 +709,10 @@
 							}
 						]
 					},
-					"inferText": "있는"
+					"inferText": "있는",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 0.9999,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -732,10 +734,10 @@
 							}
 						]
 					},
-					"inferText": "닉네임으로"
+					"inferText": "닉네임으로",
+					"inferConfidence": 0.9999
 				},
 				{
-					"inferConfidence": 0.9995,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -757,10 +759,10 @@
 							}
 						]
 					},
-					"inferText": "게"
+					"inferText": "게",
+					"inferConfidence": 0.9995
 				},
 				{
-					"inferConfidence": 0.9988,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -782,10 +784,10 @@
 							}
 						]
 					},
-					"inferText": "사진을"
+					"inferText": "사진을",
+					"inferConfidence": 0.9988
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -807,10 +809,10 @@
 							}
 						]
 					},
-					"inferText": "등록해보세요."
+					"inferText": "등록해보세요.",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -832,10 +834,10 @@
 							}
 						]
 					},
-					"inferText": "표현할"
+					"inferText": "표현할",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -857,10 +859,10 @@
 							}
 						]
 					},
-					"inferText": "수"
+					"inferText": "수",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -882,10 +884,10 @@
 							}
 						]
 					},
-					"inferText": "있는"
+					"inferText": "있는",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 0.9998,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -907,10 +909,10 @@
 							}
 						]
 					},
-					"inferText": "계정"
+					"inferText": "계정",
+					"inferConfidence": 0.9998
 				},
 				{
-					"inferConfidence": 1.0,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -932,10 +934,10 @@
 							}
 						]
 					},
-					"inferText": "아이디"
+					"inferText": "아이디",
+					"inferConfidence": 1.0
 				},
 				{
-					"inferConfidence": 0.9954,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -957,10 +959,10 @@
 							}
 						]
 					},
-					"inferText": "myundiy0914"
+					"inferText": "myundiy0914",
+					"inferConfidence": 0.9954
 				},
 				{
-					"inferConfidence": 0.9999,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -982,10 +984,10 @@
 							}
 						]
 					},
-					"inferText": "비밀번호"
+					"inferText": "비밀번호",
+					"inferConfidence": 0.9999
 				},
 				{
-					"inferConfidence": 0.9999,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -1007,10 +1009,10 @@
 							}
 						]
 					},
-					"inferText": "변경"
+					"inferText": "변경",
+					"inferConfidence": 0.9999
 				},
 				{
-					"inferConfidence": 0.9996,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -1032,10 +1034,10 @@
 							}
 						]
 					},
-					"inferText": "이메일"
+					"inferText": "이메일",
+					"inferConfidence": 0.9996
 				},
 				{
-					"inferConfidence": 0.9997,
 					"valueType": "ALL",
 					"boundingPoly": {
 						"vertices": [
@@ -1057,12 +1059,10 @@
 							}
 						]
 					},
-					"inferText": "변경"
+					"inferText": "변경",
+					"inferConfidence": 0.9997
 				}
 			]
 		}
-	],
-	"requestId": "logan",
-	"version": "V1",
-	"timestamp": 1728281978121
+	]
 }

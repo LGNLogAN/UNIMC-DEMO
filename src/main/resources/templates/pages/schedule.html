@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled 서버</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" th:href=" @{/css/style.css}">
+    <link rel="stylesheet" th:href=" @{/css/pages/schedule.css}">
+    <!-- CSS -->
+
+    <!-- Script -->
+    <script th:src="@{/script/common/js/script.js}" defer></script>
+    <script th:src="@{/script/common/js/preloader.js}" defer></script>
+    <script type="module" th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}" defer></script>
+	<script nomodule th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}" defer></script>
+    <!-- Script -->
+</head>
+
+<body>
+<th:block th:replace="~{fragments/fragment_preloader :: preloader}"></th:block>
+    <nav>
+		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
+	</nav>
+    <header>
+        <div class="header-content">
+    		<div class="hc-title">
+		        <div class="main-title">스케쥴</div>
+		        <div class="sub-title">앞으로의 이벤트나 서버의 관한 일정을 확인하세요 !</div>
+	        </div>
+			<div class="hc-logo">
+				<svg width="80" height="80" fill="none" stroke="#ffffff"
+					stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+					viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect>
+					<path d="M12 10a4 4 0 1 0 0 8 4 4 0 1 0 0-8z"></path>
+					<path d="M12 6h.01"></path>
+				</svg>
+			</div>
+		</div>
+    </header>
+	<section>
+		<div class="section-container">
+		
+		</div>
+	</section>
+
+    <footer>
+    	<th:block th:replace="~{fragments/fragment_footer :: footer}"></th:block>
+	</footer>
+</body>
+
+</html>

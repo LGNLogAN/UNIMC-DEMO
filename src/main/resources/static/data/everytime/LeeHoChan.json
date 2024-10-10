@@ -1,0 +1,268 @@
+{
+	"version": "V1",
+	"requestId": "logan",
+	"timestamp": 1728396756672,
+	"images": [
+		{
+			"uid": "e23711312c704836a14178b04a68b8b4",
+			"name": "image",
+			"inferResult": "SUCCESS",
+			"message": "SUCCESS",
+			"validationResult": {
+				"result": "NO_REQUESTED"
+			},
+			"fields": [
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 70.0,
+								"y": 30.0
+							},
+							{
+								"x": 128.0,
+								"y": 30.0
+							},
+							{
+								"x": 128.0,
+								"y": 94.0
+							},
+							{
+								"x": 70.0,
+								"y": 94.0
+							}
+						]
+					},
+					"inferText": "내",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 130.0,
+								"y": 30.0
+							},
+							{
+								"x": 292.0,
+								"y": 30.0
+							},
+							{
+								"x": 292.0,
+								"y": 96.0
+							},
+							{
+								"x": 130.0,
+								"y": 96.0
+							}
+						]
+					},
+					"inferText": "프로필",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 314.0,
+								"y": 508.0
+							},
+							{
+								"x": 478.0,
+								"y": 508.0
+							},
+							{
+								"x": 478.0,
+								"y": 577.0
+							},
+							{
+								"x": 314.0,
+								"y": 577.0
+							}
+						]
+					},
+					"inferText": "이호찬",
+					"inferConfidence": 1.0
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 315.0,
+								"y": 602.0
+							},
+							{
+								"x": 474.0,
+								"y": 602.0
+							},
+							{
+								"x": 474.0,
+								"y": 653.0
+							},
+							{
+								"x": 315.0,
+								"y": 653.0
+							}
+						]
+					},
+					"inferText": "백석예대",
+					"inferConfidence": 0.999
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 314.0,
+								"y": 672.0
+							},
+							{
+								"x": 475.0,
+								"y": 672.0
+							},
+							{
+								"x": 475.0,
+								"y": 723.0
+							},
+							{
+								"x": 314.0,
+								"y": 723.0
+							}
+						]
+					},
+					"inferText": "외식학부",
+					"inferConfidence": 0.9998
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 247.0,
+								"y": 741.0
+							},
+							{
+								"x": 385.0,
+								"y": 741.0
+							},
+							{
+								"x": 385.0,
+								"y": 790.0
+							},
+							{
+								"x": 247.0,
+								"y": 790.0
+							}
+						]
+					},
+					"inferText": "24학번",
+					"inferConfidence": 0.9998
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 394.0,
+								"y": 760.0
+							},
+							{
+								"x": 411.0,
+								"y": 760.0
+							},
+							{
+								"x": 411.0,
+								"y": 777.0
+							},
+							{
+								"x": 394.0,
+								"y": 777.0
+							}
+						]
+					},
+					"inferText": "·",
+					"inferConfidence": 0.9217
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 414.0,
+								"y": 740.0
+							},
+							{
+								"x": 539.0,
+								"y": 740.0
+							},
+							{
+								"x": 539.0,
+								"y": 792.0
+							},
+							{
+								"x": 414.0,
+								"y": 792.0
+							}
+						]
+					},
+					"inferText": "재학생",
+					"inferConfidence": 0.9999
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 188.0,
+								"y": 972.0
+							},
+							{
+								"x": 271.0,
+								"y": 972.0
+							},
+							{
+								"x": 271.0,
+								"y": 1024.0
+							},
+							{
+								"x": 188.0,
+								"y": 1024.0
+							}
+						]
+					},
+					"inferText": "실명",
+					"inferConfidence": 0.9998
+				},
+				{
+					"valueType": "ALL",
+					"boundingPoly": {
+						"vertices": [
+							{
+								"x": 629.0,
+								"y": 981.0
+							},
+							{
+								"x": 657.0,
+								"y": 981.0
+							},
+							{
+								"x": 657.0,
+								"y": 1018.0
+							},
+							{
+								"x": 629.0,
+								"y": 1018.0
+							}
+						]
+					},
+					"inferText": ">",
+					"inferConfidence": 0.9953
+				}
+			]
+		}
+	]
+}
