@@ -18,8 +18,12 @@
 <script th:src="@{/script/common/js/fieldValidation.js}" defer></script>
 <script th:src="@{/script/pages/simplesignup.js}" defer></script>
 <script th:src="@{/script/jquery/jquery-3.7.1.min.js}"></script>
-<script type="module"th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}"defer></script>
-<script nomoduleth:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}"defer></script>
+<script type="module"
+	th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}"
+	defer></script>
+<script
+	nomoduleth:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}"
+	defer></script>
 <!-- Script -->
 </head>
 <body>
@@ -45,10 +49,10 @@
 					</div>
 				</div>
 				<form action="" class="everytime-profile-form">
-				
+
 					<div class="file-upload-example-container">
 						<div class="example-header">
-							<h3 class="title">올바른 에브리타임 사진 제출 예시</h3>
+							<h3 class="title">에브리타임 사진 예시 1번</h3>
 						</div>
 						<div class="example">
 							<div class="phone">
@@ -56,8 +60,7 @@
 								<div class="btn2"></div>
 								<div class="btn3"></div>
 								<div class="btn4"></div>
-								<div class="phone-int">
-								</div>
+								<div class="phone-int"></div>
 								<div class="top">
 									<div class="camera">
 										<div class="int"></div>
@@ -66,9 +69,9 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="changeBtn">
-							<button class="example-view">틀린 예시 보기</button>
+							<button class="example-view">2번 예시 보기</button>
 						</div>
 					</div>
 
@@ -77,67 +80,105 @@
 				<form action="" class="signup-form">
 					<div class="input-group">
 						<div class="file-upload">
-							<label for="file-upload" class="file-upload-label"> 
-								<span class="file-upload-icon">📁</span>
-								<span class="file-upload-text">파일을 선택하거나 여기로 드래그하세요</span>
-								<span class="file-name" id="file-name">선택된 파일 없음</span>
-							</label> 
-							<input type="file" id="file-upload" name="file-upload" class="file-upload-input" onchange="updateFileName(this)">
-							<button type="button" onclick="document.getElementById('file-upload').click()" class="file-upload-button">파일 선택</button>
+							<label for="file-upload" class="file-upload-label"> <span
+								class="file-upload-icon">📁</span> <span
+								class="file-upload-text">파일을 선택하거나 여기로 드래그하세요</span> <span
+								class="file-name" id="file-name">선택된 파일 없음</span>
+							</label> <input type="file" id="file-upload" name="file-upload"
+								class="file-upload-input" onchange="updateFileName(this)"
+								accept="image/*">
+							<button type="button"
+								onclick="document.getElementById('file-upload').click()"
+								class="file-upload-button">파일 선택</button>
 						</div>
 					</div>
+					<div class="input-group" id="input-group-name">
+						<label for="name">이름</label>
+						<div class="input-form">
+							<ion-icon name="person-outline" class="tagIcon"></ion-icon>
+							<input id="name" name="name" type="text"
+								placeholder="이름을 입력해주세요." autocomplete="off" maxlength="10">
+						</div>
+						<span id="error-message-name" class="error-message name"></span>
+					</div>
+
+					<div class="input-group">
+						<label for="major">전공</label>
+						<div class="input-form">
+							<ion-icon name="school-outline" class="tagIcon"></ion-icon>
+							<input id="major" name="major" type="text"
+								placeholder="전공을 적어주세요." autocomplete="off">
+						</div>
+						<span id="error-message-major" class="error-message major"></span>
+					</div>
+
+					<div class="input-group">
+						<label for="campus">캠퍼스</label>
+						<div class="input-form">
+							<ion-icon name="trail-sign-outline" class="tagIcon"></ion-icon>
+							<input id="campus" name="campus" type="text"
+								placeholder="캠퍼스를 적어주세요." autocomplete="off">
+						</div>
+						<span id="error-message-campus" class="error-message campus"></span>
+					</div>
+
 					<div class="input-group">
 						<label for="name">마인크래프트 닉네임</label>
 						<div class="input-form">
 							<ion-icon name="person-outline" class="tagIcon"></ion-icon>
-							<input id="mcname" name="mcname" type="text"
-								placeholder="마인크래프트 닉네임을 입력해주세요 !" autocomplete="off">
+							<input id="mcname" name="mcName" type="text"
+								placeholder="마인크래프트 닉네임을 입력해주세요." autocomplete="off">
 						</div>
+						<span id="error-message-mcname" class="error-message mcname"></span>
 					</div>
+
 					<div class="input-group">
 						<label for="email">대학교 이메일</label>
 						<div class="input-form">
 							<div class="input-form-section">
 								<ion-icon name="at-outline" class="tagIcon"></ion-icon>
-								<input id="email" name="uniEmail" type="text" placeholder="재학중인 대학교 이메일을 입력해주세요 !" autocomplete="off">
+								<input id="email" name="uniEmail" type="text"
+									placeholder="재학중인 대학교 이메일을 입력해주세요." autocomplete="off">
 							</div>
-							<button class="btn-send">코드전송</button>
+							<button type="button" class="btn-send" id="btn-send">코드전송</button>
 						</div>
+						<span id="error-message-email" class="error-message email"></span>
+						<span class="description" id="error-message-emailInput"></span>
 
 						<div class="input-form-auth">
 							<label for="code">인증코드 입력</label> <span
-								class="authentication-pass">인증되었습니다</span> <span
-								class="authentication-fail">옳지않은 인증코드입니다.</span>
+								class="authentication-pass" id="code-match-pass"></span> <span
+								class="authentication-fail" id="code-match-fail"></span>
+
 							<div class="input-form-code">
 								<ion-icon name="key-outline" class="tagIcon"></ion-icon>
 								<input id="code" name="code" type="text" placeholder="인증코드"
 									autocomplete="off">
-								<button class="btn-check">확인</button>
+								<button type="button" class="btn-check" id="btn-check">확인</button>
 							</div>
 						</div>
 					</div>
-					<div class="input-group">
-						<label for="password">비밀번호</label> <span
-							class="authentication-pass">비밀번호가 일치합니다.</span> <span
-							class="authentication-fail">비밀번호가 일치하지않습니다.</span>
-						<div class="input-form">
-							<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
-							<input id="password" name="password" type="password"
-								placeholder="비밀번호를 적어주세요." autocomplete="off">
-						</div>
-						<div class="description">저희 서버는 「정보통신망 이용촉진 및 정보보호 등에 관한
-							법률」에 따라 모든 비밀번호를 안전하게 암호화하여 처리하고 있습니다.</div>
-						<label for="password_check">비밀번호 재확인</label>
-						<div class="input-form">
-							<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
-							<input id="password_check" name="password_check" type="password"
-								placeholder="비밀번호를 적어주세요." autocomplete="off">
-						</div>
 
-					</div>
+					<div class="input-group">
+        				<label for="password">비밀번호</label>
+        				<span class="authentication-pass" id="password-match-pass"></span>
+                		<span class="authentication-fail" id="password-match-fail"></span>
+        				<div class="input-form">
+        					<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
+		                    <input id="password" name="password" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off">
+		                </div> 
+		                <div class="description">저희 서버는 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」에 따라 모든 비밀번호를 안전하게 암호화하여 처리하고 있습니다.</div>
+        				<label for="password_check">비밀번호 재확인</label>
+        				<div class="input-form">
+        					<ion-icon name="lock-closed-outline" class="tagIcon"></ion-icon>
+		                    <input id="password_check" name="password_check" type="password" placeholder="비밀번호를 적어주세요." autocomplete="off">
+		                </div> 
+        			</div>
+
 					<div class="submit-container">
-						<button>서버 접속 하기 !</button>
+						<button type="button" id="btn-signup">서버 접속 하기</button>
 					</div>
+
 				</form>
 			</div>
 		</div>

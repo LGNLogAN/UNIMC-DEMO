@@ -62,7 +62,7 @@ public class EmailAuthController {
     		// Redis를 사용하여 이메일과 인증 코드를 저장
     		redisService.setVerificationCode(uniEmail, verificationCode);
     		
-    		return "인증 코드가 이메일로 전송되었습니다.";
+    		return "인증 코드가 이메일로 전송되었습니다.email";
     	}
     	
     }

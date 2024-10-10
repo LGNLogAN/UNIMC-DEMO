@@ -60,16 +60,16 @@ public class UserServiceImpl implements UserService {
 			
 			userDAO.signup(userDTO);
 			System.out.println("UserServiceImpl : " + userDTO + "\nResult : SignUp Success");
-			return "SignUp Success";
+			return "[ Sign Up Success ]";
 		}else {
 			System.out.println("UserServiceImpl : " + userDTO + "\nResult : SignUp Fail");
-			return "SignUp Fail";
+			return "[ Error ] : 400 Bad Request\n[ Comment ] : 인증이 되지않은 이메일입니다.";
 		}
 		
 	}
 
 	@Override
-	public void simpleSignup() {
+	public void simpleSignup(UserDTO userDTO) {
 		// TODO 이미지 텍스트화 모든 로그인 기능 구현 후 구현
 	}
 

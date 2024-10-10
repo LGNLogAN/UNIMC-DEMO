@@ -1,6 +1,5 @@
 package com.application.unimc;
 
-import static org.assertj.core.api.Assertions.in;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,7 +10,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -25,7 +23,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.application.unimc.dao.UserDAO;
 import com.application.unimc.service.OcrService;
 import com.application.unimc.service.RegexService;
 import com.application.unimc.service.UniversityDomainCheckService;
@@ -65,7 +62,7 @@ class UnimcApplicationTests {
 	
 	@Test
 	void testIsEmailDuplicate() {
-//		String uniEmail = "logan061175@sju.ac.kr";
+		//String uniEmail = "logan061175@sju.ac.kr";
 		String uniEmail = "logan061175@kore.ac.kr";
 		String emailCheckResult = "pass";
 		boolean isEmailDuplicate = userService.isEmailExists(uniEmail);
@@ -172,7 +169,7 @@ class UnimcApplicationTests {
         				"있는","커뮤니티","변경","비밀번호","아이디",">","<","3/5","수",".40"));
         
         
-        String jsonFilePath = "/static/data/everytime/LeeHoChan.json";
+        String jsonFilePath = "/static/data/everytime/KimYuBin.json";
         try {
         	reader = new InputStreamReader(getClass().getResourceAsStream(jsonFilePath));
         	JSONObject exampleJson = (JSONObject) parser.parse(reader);
@@ -208,6 +205,7 @@ class UnimcApplicationTests {
             for (String text : inferTextList) {
                 System.out.println(text);
             }
+            
             System.out.println("\n======== Regex Data ========\n");
             for (String data : inferTextList) {
 				if(regexService.majorMatchesPattern(data)) {

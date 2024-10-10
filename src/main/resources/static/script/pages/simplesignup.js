@@ -18,8 +18,8 @@ document.querySelector(".changeBtn").addEventListener('click' , (event) =>{
 	
 	// 틀린 예시 보기
 	if (!isClick){
-		document.querySelector(".title").textContent = "틀린 에브리타임 사진 제출 예시";
-		document.querySelector(".example-view").textContent = "올바른 예시 보기";
+		document.querySelector(".title").textContent = "에브리타임 사진 예시 2번";
+		document.querySelector(".example-view").textContent = "1번 예시 보기";
 		
 		// 틀린 에브리타임 제출 사진 배경설정
 		phoneInt.style.backgroundImage = "url('/img/jinsiwoo-2.jpg')";
@@ -39,8 +39,8 @@ document.querySelector(".changeBtn").addEventListener('click' , (event) =>{
 		
 	// 올바른 예시 보기
 	}else if(isClick){
-		document.querySelector(".title").textContent = "올바른 에브리타임 사진 제출 예시";
-		document.querySelector(".example-view").textContent = "틀린 예시 보기";
+		document.querySelector(".title").textContent = "에브리타임 사진 예시 1번";
+		document.querySelector(".example-view").textContent = "2번 예시 보기";
 		
 		// 올바른 에브리타임 제출 사진 배경설정
 		phoneInt.style.backgroundImage = "url('/img/jinsiwoo_Everytime.jpg')";

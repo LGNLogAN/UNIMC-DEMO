@@ -58,5 +58,6 @@ public class RegexService {
 	public boolean containsStudentKeyword(String input) {
 	    return input.contains("재학생");
 	}
+	
 
 }
