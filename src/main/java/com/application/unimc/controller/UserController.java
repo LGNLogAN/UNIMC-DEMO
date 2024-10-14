@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.application.unimc.dto.UserDTO;
-import com.application.unimc.service.UniversityDomainCheckService;
 import com.application.unimc.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;

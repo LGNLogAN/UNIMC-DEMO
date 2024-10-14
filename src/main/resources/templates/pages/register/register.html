@@ -16,8 +16,6 @@
 <script th:src="@{/script/common/js/script.js}" defer></script>
 <script th:src="@{/script/common/js/preloader.js}" defer></script>
 <script th:src="@{/script/jquery/jquery-3.7.1.min.js}"></script>
-<script type="module"th:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'}"defer></script>
-<script nomoduleth:src="@{'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'}"defer></script>
 
 <!-- Script -->
 </head>
@@ -33,12 +31,18 @@
 				<h1>회원가입 방식 선택</h1>
 				<div class="options">
 					<div class="option" onclick="location.href='/simplesignup'">
-						<div class="icon">🚀</div>
+						<div class="icon">
+							<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+							<dotlottie-player src="https://lottie.host/eecacd18-8e9c-40db-92bd-4a43776c38b8/WNF95YN1Fr.json" background="transparent" speed="1" style="width: 100px; height:100px" direction="1" playMode="normal" autoplay></dotlottie-player>
+						</div>
 						<h2>간편 회원가입</h2>
 						<p>에브리타임 프로필 사진으로 최대한 빨리 서버에 접속해보세요 !</p>
 					</div>
 					<div class="option" onclick="location.href='/signup'">
-						<div class="icon">📝</div>
+						<div class="icon">
+							<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+							<dotlottie-player src="https://lottie.host/ab99438b-30f7-40ff-ad74-5b12e072bb8b/4IMA4emTp4.json" background="transparent" speed="1" style="width: 200px; height: 200px" direction="1" playMode="normal" autoplay></dotlottie-player>
+						</div>
 						<h2>일반 회원가입</h2>
 						<p>서버를 즐기는데 필요한 최소한의 정보를 입력하여 가입하세요 !</p>
 					</div>

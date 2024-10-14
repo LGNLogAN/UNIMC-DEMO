@@ -30,6 +30,15 @@
 	<nav>
 		<th:block th:replace="~{fragments/fragment_nav :: nav}"></th:block>
 	</nav>
+	<div id="privacyOverlay" class="overlay">
+		<div class="privacy-card">
+            <h2>개인정보 수집 안내</h2>
+            <p>저희 서버는 100% 실명제이기 때문에 최소한의 정보를 수집하고있습니다.</p>
+            <p>입력하시는 개인정보는 오로지 인 게임 서버에서 프로필에서만 사용됩니다.</p>
+            <p>저장되는 모든 데이터들은 서버 종료와 함께 개인정보 보호법에 따라 삭제 처리됩니다.</p>
+            <button id="agreeButton">동의합니다</button>
+        </div>
+	</div>
 	<header>
 		<div class="header-content">
 			<div class="hc-title">

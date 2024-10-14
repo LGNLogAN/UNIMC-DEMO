@@ -84,6 +84,10 @@ h1 {
 .icon {
 	font-size: 48px;
 	margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
 }
 
 .button {

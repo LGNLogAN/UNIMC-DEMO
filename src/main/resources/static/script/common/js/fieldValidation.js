@@ -1,7 +1,11 @@
 let isAuthentication = false;
+
+document.getElementById('agreeButton').addEventListener('click', function() {
+    document.getElementById('privacyOverlay').classList.add('hidden');
+});
+
 function validateUniversityEmail(email) {
 	const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.ac\.kr$/;
-//	const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 	return pattern.test(email);
 }
 function checkPasswordMatch() {
@@ -17,7 +21,76 @@ function checkPasswordMatch() {
 	}
 }
 
+function checkName() {
+	const nameValue = $('#name').val().trim(); // 공백 제거
+	const nameRegex = /^[가-힣]{2,4}$/;
 
+	if (!nameValue) {
+		return false;
+	} else if (!nameRegex.test(nameValue)) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function checkMcName() {
+	const mcNameValue = $('#mcname').val().trim();
+	const mcNameRegex = /^[a-zA-Z0-9_]{3,16}$/;
+
+	if (!mcNameValue) {
+		return false;
+	} else if (!mcNameRegex.test(mcNameValue)) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function checkPassword() {
+	const passwordValue = $("#password").val();
+	const passwordCheckValue = $("#password_check").val();
+
+	if (!passwordValue) {
+		return false;
+	} else if (!passwordCheckValue) {
+		return false;
+	} else if (passwordValue != passwordCheckValue) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function checkMajor() {
+	const majorValue = $("#major").val().trim();
+
+	if (!majorValue) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function checkCampus() {
+	const campusValue = $("#campus").val().trim();
+
+	if (!campusValue) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+function sendVerificationCode(email){
+		$.ajax({
+			type : "GET",
+			url  : "/send-verification-code",
+			data : { uniEmail : email },
+			dataType : "text",
+			success : function(){}
+		});
+}
 
 $(function() {
 	// 기본 폼 제출 방지
@@ -85,34 +158,7 @@ $(function() {
 	});
 	
 	
-	function sendVerificationCode(email){
-		$.ajax({
-			type : "GET",
-			url  : "/send-verification-code",
-			data : { uniEmail : email },
-			dataType : "text",
-			success : function(response){
-				alert(response);
-				console.log(response);
-			}
-		});
-	}
 	
-	function verifyCode(inputCode){
-		$.ajax({
-			type : "GET",
-			url : "/verify-code",
-			data : { code : inputCode },
-			dataType : "json",
-			success : function(response){
-				if(response){
-					
-				}else{
-					
-				}
-			}
-		});
-	}
 	
 	$("#btn-send").on('click', function() {
 		const emailInput = $('#email');
@@ -142,8 +188,8 @@ $(function() {
 					$("#error-message-emailInput").text("대학교를 등록하려면 ? 디스코드 : mubin_c 로 연락주세요 !");
 					emailInput.focus();
 				} else {
+					alert("인증 코드가 이메일로 전송되었습니다.");
 					sendVerificationCode(email);
-//					alert("인증 코드가 이메일로 전송되었습니다.");
 					$(".input-form-auth").css('display', 'block');
 				}
 			},
@@ -193,70 +239,6 @@ $(function() {
 			}
 		});
 	})
-	
-	function checkName() {
-		const nameValue = $('#name').val().trim(); // 공백 제거
-		const nameRegex = /^[가-힣]{2,4}$/;
-
-		if (!nameValue) {
-			return false;
-
-		} else if (!nameRegex.test(nameValue)) {
-			return false;
-
-		} else {
-			return true;
-		}
-	}
-
-	function checkMcName() {
-		const mcNameValue = $('#mcname').val().trim();
-		const mcNameRegex = /^[a-zA-Z0-9_]{3,16}$/;
-
-		if (!mcNameValue) {
-			return false;
-		} else if (!mcNameRegex.test(mcNameValue)) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
-	function checkPassword() {
-		const passwordValue = $("#password").val();
-		const passwordCheckValue = $("#password_check").val();
-
-		if (!passwordValue) {
-			return false;
-		} else if (!passwordCheckValue) {
-			return false;
-		} else if (passwordValue != passwordCheckValue) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
-	function checkMajor() {
-		const majorValue = $("#major").val().trim();
-
-		if (!majorValue) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
-	function checkCampus() {
-		const campusValue = $("#campus").val().trim();
-
-		if (!campusValue) {
-			return false;
-		} else {
-			return true;
-		}
-	}
-
 	
 	$("#btn-signup").on('click', function() {
 		if (!checkName()) {

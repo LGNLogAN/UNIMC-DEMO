@@ -64,7 +64,6 @@ public class EmailAuthController {
     		
     		return "인증 코드가 이메일로 전송되었습니다.email";
     	}
-    	
     }
 
     
@@ -83,8 +82,8 @@ public class EmailAuthController {
     
     @GetMapping("/emailCheck")
 	@ResponseBody
-	public String emailCheck(@RequestParam("uniEmail") String uniEmail) {
-		String emailCheckResult = "pass";
+	public String emailCheck(@RequestParam("uniEmail") String uniEmail)  {
+		String emailCheckResult = "";
 		boolean isEmailDuplicate = userService.isEmailExists(uniEmail);
 		
 		if(isEmailDuplicate) {
@@ -93,6 +92,7 @@ public class EmailAuthController {
 			emailCheckResult = "NotFound";
 		}
 		System.out.println("emailCheck : " + uniEmail);
+		
 		return emailCheckResult;
 	}
 }

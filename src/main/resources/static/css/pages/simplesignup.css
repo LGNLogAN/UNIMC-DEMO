@@ -1,5 +1,6 @@
 @import url('/css/components/header.css');
-@import url('/css/pages/signup.css');
+@import url('/css/components/signUpField.css');
+
 h3{
 	font-family: 'Pretendard-Regular';
     color: #2c3e50;
@@ -16,7 +17,7 @@ h3{
 }
 
 @media (max-width : 480px){
-.everytime-profile-form {
+	.everytime-profile-form {
 		gap: 0px;
 		display: flex;
 		width: 70%;
