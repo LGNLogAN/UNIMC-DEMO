@@ -169,7 +169,7 @@ class UnimcApplicationTests {
         				"있는","커뮤니티","변경","비밀번호","아이디",">","<","3/5","수",".40"));
         
         
-        String jsonFilePath = "/static/data/everytime/KimYuBin.json";
+        String jsonFilePath = "/static/data/everytime/ByunHyungWook.json";
         try {
         	reader = new InputStreamReader(getClass().getResourceAsStream(jsonFilePath));
         	JSONObject exampleJson = (JSONObject) parser.parse(reader);
