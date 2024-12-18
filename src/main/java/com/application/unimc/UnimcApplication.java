@@ -9,5 +9,4 @@ public class UnimcApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UnimcApplication.class, args);
 	}
-
 }
