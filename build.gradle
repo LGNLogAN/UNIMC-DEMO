@@ -24,30 +24,47 @@ repositories {
 }
 
 dependencies {
+	// Spring Boot 기본 의존성
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	// MyBatis
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	
-	// Json 읽기
+
+	// Json-simple 라이브러리
 	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+
 	// 이메일 전송
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
-	// redis 저장공간
+
+	// Redis 저장소 사용
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-	// Thymeleaf Layout
+
+	// Thymeleaf Layout Dialect
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
-	// security
-    implementation 'org.springframework.boot:spring-boot-starter-security'
-	// log4jdbc
-	implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
-	
+
+	// Spring Security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	// log4jdbc (JDBC 로그를 위한 라이브러리)
+	//implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+
+	// Lombok
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	// 개발 전용 도구
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+	// MySQL 연결 드라이버
+	implementation 'mysql:mysql-connector-java:8.0.28'
+
+	// 테스트 의존성
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
+	testImplementation 'org.junit.jupiter:junit-jupiter'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 

@@ -41,29 +41,43 @@ public class EmailAuthController {
 
     @GetMapping("/send-verification-code")
     public String sendVerificationCode(@RequestParam("uniEmail") String uniEmail) {
-    	
-		if(!regexService.emailMatchesPattern(uniEmail)) {
-			return "[ Error ] : 400 Bad Request\n[ Comment ] : 지원하지않은 이메일입니다.";
-    	}else if(domainCheckService.univerysityNameCheck(uniEmail) == null) {
-    		return "[ Error ] : 404 Not Found\n[ Comment ] : 해당 대학교 이메일은 지원하지않습니다.\n[ Inquiry ] : 디스코드(mubin_c)";
-    	}else if(userService.isEmailExists(uniEmail)){
-    		return "[ Error ] : 409 Conflict\n[ Commnet ] : 이미 등록되어있는 이메일입니다.\n[ Inquiry ] : 디스코드(mubin_c)";
-    	}else{
-    		// 6자리 랜덤 인증 코드 생성
-    		String verificationCode = generateVerificationCode();
-    		
-    		// 이메일 본문 내용
-    		String subject = "이메일 인증 코드";
-    		String body = "인증 코드는 다음과 같습니다: " + verificationCode;
-    		
-    		// 이메일 인증코드 전송
-    		emailSenderService.sendEmail(uniEmail, subject, body);
-    		
-    		// Redis를 사용하여 이메일과 인증 코드를 저장
-    		redisService.setVerificationCode(uniEmail, verificationCode);
-    		
-    		return "인증 코드가 이메일로 전송되었습니다.email";
-    	}
+        // 6자리 랜덤 인증 코드 생성
+        String verificationCode = generateVerificationCode();
+
+        // 이메일 본문 내용
+        String subject = "이메일 인증 코드";
+        String body = "인증 코드는 다음과 같습니다: " + verificationCode;
+
+        // 이메일 인증코드 전송
+        emailSenderService.sendEmail(uniEmail, subject, body);
+
+        // Redis를 사용하여 이메일과 인증 코드를 저장
+        redisService.setVerificationCode(uniEmail, verificationCode);
+
+        return "인증 코드가 이메일로 전송되었습니다.email";
+
+//		if(!regexService.emailMatchesPattern(uniEmail)) {
+//			return "[ Error ] : 400 Bad Request\n[ Comment ] : 지원하지않은 이메일입니다.";
+//    	}else if(domainCheckService.univerysityNameCheck(uniEmail) == null) {
+//    		return "[ Error ] : 404 Not Found\n[ Comment ] : 해당 대학교 이메일은 지원하지않습니다.\n[ Inquiry ] : 디스코드(mubin_c)";
+//    	}else if(userService.isEmailExists(uniEmail)){
+//    		return "[ Error ] : 409 Conflict\n[ Commnet ] : 이미 등록되어있는 이메일입니다.\n[ Inquiry ] : 디스코드(mubin_c)";
+//    	}else{
+//    		// 6자리 랜덤 인증 코드 생성
+//    		String verificationCode = generateVerificationCode();
+//
+//    		// 이메일 본문 내용
+//    		String subject = "이메일 인증 코드";
+//    		String body = "인증 코드는 다음과 같습니다: " + verificationCode;
+//
+//    		// 이메일 인증코드 전송
+//    		emailSenderService.sendEmail(uniEmail, subject, body);
+//
+//    		// Redis를 사용하여 이메일과 인증 코드를 저장
+//    		redisService.setVerificationCode(uniEmail, verificationCode);
+//
+//    		return "인증 코드가 이메일로 전송되었습니다.email";
+//    	}
     }
 
     
